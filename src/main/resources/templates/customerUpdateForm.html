@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="adminHeader :: adminHeaderAttr"></div>
+
+<!-- External CSS -->
+<link rel="stylesheet" href="" th:href="@{/css/customerUpdateForm.css}">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="row">
+			<a class="a_back_btn" th:href="@{/showCustomerList}"> <i
+				id="i_back_btn" class="fas fa-arrow-circle-left"></i>
+			</a>
+			<h3 class="header_title">Customers Details</h3>
+		</div>
+		<hr>
+
+
+
+		<form action="#" th:action="@{/saveCustomer}"
+			th:object="${customerAttr}" method="POST">
+
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{id}" />
+
+			<div class="form-group">
+				<label for="formGroupExampleInput">User Name</label> <input
+					th:field="*{user_name}" type="text" name="user_name"
+					class="form-control" id="formGroupExampleInput"
+					placeholder="User Name" autocomplete="off">
+			</div>
+
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label> <input
+					th:field="*{email}" type="email" name="email" class="form-control"
+					id="exampleInputEmail1" aria-describedby="emailHelp"
+					placeholder="Enter email" autocomplete="off"> <small
+					id="emailHelp" class="form-text text-muted">We'll never
+					share your email with anyone else.</small>
+			</div>
+
+			<div class="form-group row">
+				<div class="col-sm-5">
+					<label for="formGroupExampleInput">Password</label> <input
+						th:field="*{password}" type="text" name="Password"
+						class="form-control" id="formGroupExampleInput"
+						placeholder="Password" autocomplete="off">
+				</div>
+				<div class="col-sm-5">
+					<label for="formGroupExampleInput">Confirm Password</label> <input
+						th:field="*{confirm_password}" type="text" name="Confirm Password"
+						class="form-control" id="formGroupExampleInput"
+						placeholder="Confirm Password" autocomplete="off">
+				</div>
+			</div>
+			<div class="form-group row">
+
+				<div class="col-sm-5">
+					<label for="exampleInputPassword1">Phone</label> <input type="tel"
+						th:field="*{phone}" name="phone" id="phone" class="form-control"
+						placeholder="+911234567890" autocomplete="off">
+				</div>
+				<!-- <div class="col-sm-3" style="margin-top: 6px;">
+					<label for="exampleInputPassword2"></label> <input type="button"
+						id="sendotp" class="form-control btn btn-info" value="sendOtp">
+				</div> -->
+			</div>
+
+			<div class="form-group row">
+				<div class="col-sm-3">
+					<input type="text" name="otp" class="form-control"
+						th:field="*{otp}" placeholder="Enter Otp" autocomplete="off">
+				</div>
+			</div>
+
+
+			<button type="submit" class="btn btn-info col-2">Update
+				Customer</button>
+
+		</form>
+
+	</div>
+
+<div th:insert="adminFooter :: adminFooterAttr"></div>
+
+</body>
+</html>

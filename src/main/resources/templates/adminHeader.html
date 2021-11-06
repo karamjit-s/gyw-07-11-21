@@ -1,0 +1,90 @@
+<html>
+<body>
+
+	<div th:fragment="adminHeaderAttr">
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+
+
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>GYW</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css"
+			href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href=""
+			th:href="@{/css/customerUpdateForm.css}">
+		<link
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet">
+		<script src='https://kit.fontawesome.com/a076d05399.js'
+			crossorigin='anonymous'></script>
+
+		<!-- External CSS -->
+		<link rel="stylesheet" href="" th:href="@{/css/adminHeader.css}">
+
+
+		<nav>
+			<div class="menu">
+
+				<a href="/admin"> <img id="imgLogo" src="image/gyw_logo.png"></a>
+				<ul>
+					<li><a href="/"><i class="fas fa-home"
+							style='font-size: 22px; color: #ff0066;'></i> <span>Home</span></a></li>
+					<li><a href="showDesignsPage"><i class="fas fa-gem"
+							style='font-size: 20px; color: lawngreen;'></i><span>Designs</span></a></li>
+						<li><a href="showOffersPage"><i class='fas fa-fire'
+							style='font-size: 22px; color: orange;'></i><span>Offers</span></a></li>
+							<li><a href="showServicesPage"><i class='fas fa-magic'
+							style='font-size: 21px; color: #00ffff;'></i><span>Services</span></a></li>
+					<li><a href="showSupportPage"><i class="fa fa-lightbulb"
+							style='font-size: 21px; color: #ffff00;'></i><span>Support</span></a></li>
+					<li><a href="/showCustomerList"><i class="fas fa-users"
+							style='font-size: 22px; color: violet'></i> Customers</a></li>
+
+					<li>
+						<div class="dropdown">
+							<button class="dropbtn">
+								<i class="fas fa-user-circle"
+									style='font-size: 25px; margin-top: 0px; color: #ffd1b3;'></i><i
+									class="fas fa-angle-down"
+									style='font-size: 20px; margin-top: 0px; margin-left: 10px; color: #ffd1b3;'></i>
+							</button>
+							<div class="dropdown-content">
+								<a href="signup"><i class="fas fa-address-card"
+									style="font-size: 20px; margin-left: 6px; margin-right: 15px; color: magenta;"></i><span>Profile</span></a>
+
+								<a href="login"><i class="	fas fa-shopping-cart"
+									style="font-size: 20px; margin-left: 5px; margin-right: 10px; color: #ffff00;"></i>
+									<span>Orders</span></a> <a href="signup"> <i
+									class="fas fa-user-plus"
+									style="font-size: 20px; margin-left: 6px; margin-right: 8px; color: skyblue;"></i>
+									<span>Sign Up</span>
+								</a> <a href="login"> <i class="fas fa-chalkboard-teacher"
+									style="font-size: 20px; margin-left: 5px; margin-right: 10px; color: lawngreen;"></i>
+									<span>Log In</span>
+								</a> <a href="/"><i class="fas fa-power-off"
+									style="font-size: 22px; margin-left: 8px; margin-right: 11px; color: red"></i>
+									<span>Log Out</span> </a>
+							</div>
+						</div>
+
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+	</div>
+
+
+
+
+
+</body>
+</html>
+

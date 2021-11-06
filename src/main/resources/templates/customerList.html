@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="adminHeader :: adminHeaderAttr"></div>
+
+<!-- External CSS -->
+<link rel="stylesheet" href="" th:href="@{/css/customerList.css}">
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<a class="a_back_btn" th:href="@{/admin}"> <i id="i_back_btn"
+				class="fas fa-arrow-circle-left"></i>
+			</a>
+			<h3 class="header_title">Customers Details</h3>
+		</div>
+
+
+		<!-- <a th:href = "@{/showCustomerForm}" class="btn btn-primary btn-sm mb-3"> Add Record </a> -->
+
+		<table class="table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>
+						<!-- 						<a th:href="@{'/page/' + ${currentPage} + '?sortField=action&sortDir=' + ${reverseSortDir}}"> -->
+						User Name <!-- </a> -->
+					</th>
+					<th>
+						<!-- 						<a th:href="@{'/page/' + ${currentPage} + '?sortField=action&sortDir=' + ${reverseSortDir}}"> -->
+						Email <!-- </a> -->
+					</th>
+					<th>Password</th>
+					<th>Confirm Password</th>
+					<th>
+						<!-- 						<a th:href="@{'/page/' + ${currentPage} + '?sortField=action&sortDir=' + ${reverseSortDir}}"> -->
+						Contact <!-- </a> -->
+					</th>
+					<th>Otp</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="customerVal : ${customerAttr}">
+					<td th:text="${customerVal.user_name}"></td>
+					<td th:text="${customerVal.email}"></td>
+					<td th:text="${customerVal.password}"></td>
+					<td th:text="${customerVal.confirm_password}"></td>
+					<td th:text="${customerVal.phone}"></td>
+					<td th:text="${customerVal.otp}"></td>
+
+					<td><a
+						th:href="@{/showCustomerUpdateForm/{id}(id=${customerVal.id})}">
+							<i class="material-icons"
+							style="font-size: 32px; margin-right: 15px;">border_color</i>
+					</a> <a th:href="@{/deleteCustomer/{id}(id=${customerVal.id})}"><i
+							class="material-icons" style="font-size: 35px; color: red">delete</i>
+					</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- <div th:if = "${totalPages > 1}">
+			<div class = "row col-sm-10">
+				<div class = "col-sm-2">
+					Total Rows: [[${totalItems}]] 
+				</div>
+				<div class = "col-sm-1">
+					<span th:each="i: ${#numbers.sequence(1, totalPages)}">
+						<a th:if="${currentPage != i}" th:href="@{'/page/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
+						<span th:unless="${currentPage != i}">[[${i}]]</span>  &nbsp; &nbsp;
+					</span>
+				</div>
+				<div class = "col-sm-1">
+					<a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Next</a>
+					<span th:unless="${currentPage < totalPages}">Next</span>
+				</div>
+				
+				 <div class="col-sm-1">
+    				<a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Last</a>
+					<span th:unless="${currentPage < totalPages}">Last</span>
+   				 </div>
+			</div>
+		</div> -->
+	</div>
+
+<div th:insert="adminFooter :: adminFooterAttr"></div>
+
+</body>
+</html>
