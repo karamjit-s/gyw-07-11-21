@@ -51,11 +51,11 @@ nav .menu {
 		padding-top:30px;
 	
 	list-style: none;
-	margin-left: 10px;
+	margin-left: 0px;
 }
 
 .menu ul li:first-child {
-	margin-left: 200px;
+	margin-left: 100px;
 }
 
 .menu ul li a {

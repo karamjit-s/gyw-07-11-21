@@ -1,7 +1,5 @@
 package com.karam.gyw.otp;
 
-import java.net.http.HttpClient.Redirect;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +17,7 @@ import com.karam.gyw.service.VerificationResult;
 
 @Controller
 public class OtpController {
-
+	
 	@Autowired
 	PhoneverificationService phonesmsservice;
 
@@ -60,5 +58,6 @@ public class OtpController {
 		}
 		return "Something wrong/ Otp incorrect";
 	}
+
 
 }

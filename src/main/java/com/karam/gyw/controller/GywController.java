@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.karam.gyw.model.CustomerModel;
 import com.karam.gyw.model.GywModel;
 import com.karam.gyw.service.GywService;
 

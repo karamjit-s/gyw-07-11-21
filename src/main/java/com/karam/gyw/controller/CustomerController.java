@@ -3,10 +3,6 @@ package com.karam.gyw.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.jdbc.object.SqlQuery;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,12 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.karam.gyw.model.CustomerModel;
-import com.karam.gyw.model.GywModel;
 import com.karam.gyw.repository.CustomerRepository;
 import com.karam.gyw.service.CustomerService;
-import com.karam.gyw.service.GywService;
 import com.karam.gyw.service.PhoneverificationService;
-import com.karam.gyw.service.VerificationResult;
 
 @Controller
 

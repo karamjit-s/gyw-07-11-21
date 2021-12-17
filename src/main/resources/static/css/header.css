@@ -50,14 +50,14 @@ nav .menu {
 }
 
 .menu ul li {
-		padding-top:30px;
+		padding-top:27px;
 	
 	list-style: none;
-	margin-left: 10px;
+	margin-left: 0px;
 }
 
 .menu ul li:first-child {
-	margin-left: 400px;
+	margin-left: 300px;
 }
 
 .menu ul li a {
