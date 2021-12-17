@@ -3,7 +3,7 @@ package com.karam.gyw.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.karam.gyw.twilio.Twilioproperties;
+import com.karam.gyw.otp.OtpProperties;
 import com.twilio.exception.ApiException;
 import com.twilio.rest.verify.v2.service.Verification;
 import com.twilio.rest.verify.v2.service.VerificationCheck;
@@ -12,10 +12,10 @@ import com.twilio.rest.verify.v2.service.VerificationCheck;
 @Service
 public class PhoneverificationService {
 
-	private final Twilioproperties twilioproperties;
+	private final OtpProperties twilioproperties;
 
 	@Autowired
-	public PhoneverificationService(Twilioproperties twilioproperties) {
+	public PhoneverificationService(OtpProperties twilioproperties) {
 		this.twilioproperties=twilioproperties;
 	}
 	
