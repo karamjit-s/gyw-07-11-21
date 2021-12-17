@@ -7,19 +7,19 @@ body {
 }
 
 #main_div {
-	padding-top: 15%;
+	padding-top: 0%;
 }
 
 .header_title {
-	padding-left: 370px;
-	padding-top: 10px;
+	padding-left: 350px;
+	padding-top: 0px;
 }
 
 .a_back_btn {
 	font-size: 50px;
-	padding-left: 28px;
+	padding-left: 10px;
 }
 
 form {
-	padding: 3%;
+	padding: 0%;
 }
