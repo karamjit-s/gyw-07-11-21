@@ -1,0 +1,38 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap')
+	;
+
+body {
+	background-color: #e2e2e2;
+}
+
+.container {
+	padding-top: 10%;
+	padding-bottom: 15%;
+}
+
+.title {
+	padding-left: 500px;
+}
+
+.form-group {
+	width: 50%;
+	margin-left: 26%;
+}
+
+.form {
+	padding: 5%;
+}
+
+.modal-footer {
+	padding: 10%;
+}
+
+.submit-btn {
+	margin-right: 5%;
+}
+
+button {
+	color: blue;
+	padding: 15%;
+}
