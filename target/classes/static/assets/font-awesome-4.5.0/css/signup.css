@@ -6,7 +6,10 @@ body {
 	background-color: #e2e2e2;
 }
 
+.title {
+	padding-left: 470px;
+}
+
 .container {
-	padding-top: 20%;
-	height: 100%;
+	padding-top: 10%;
 }

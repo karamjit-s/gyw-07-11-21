@@ -59,5 +59,16 @@ public class OtpController {
 		return "Something wrong/ Otp incorrect";
 	}
 
+	
+	@PostMapping("/signup")
+	public String signup(@ModelAttribute("customer_attribute") CustomerModel customerModel) {
+		
+			customerService.saveCustomer(customerModel);
+			
+			System.out.println(customerModel);
+
+			return "redirect:/";
+
+	}
 
 }

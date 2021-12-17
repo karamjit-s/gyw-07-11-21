@@ -3,7 +3,7 @@
 <head>
 	<div th:replace="header :: headerAttr"></div>
 
-<link rel="stylesheet" href="" th:href="@{/assets/css/signup.css}">
+<link rel="stylesheet" href="" th:href="@{/assets/font-awesome-4.5.0/css/signup.css}">
 
 </head>
 
@@ -11,11 +11,11 @@
 
 	<div class="container" >
 
-
+<h1 class="title">SIGN UP </h1>
 
 
 		<div style="padding: 10px">
-			<form autocomplete="off" action="#" th:action="@{/verifyotp}" th:object="${customer_attribute}"
+			<form autocomplete="off" action="#" th:action="@{/signup}" th:object="${customer_attribute}"
 				method="post">
 				<div class="form-group">
 					<label for="formGroupExampleInput">User Name</label> <input th:field="*{user_name}"
@@ -47,7 +47,7 @@
 						autocomplete="off">
 				</div>
 				</div>
-				<div class="form-group row">
+				<!-- <div class="form-group row">
 
 					<div class="col-sm-5">
 						<label for="exampleInputPassword1">Phone</label> <input type="tel"  th:field="*{phone}"
@@ -65,7 +65,7 @@
 						<input type="text" name="otp" class="form-control" th:field="*{otp}"
 							placeholder="Enter Otp" autocomplete="off">
 					</div>
-				</div>
+				</div> -->
 
 
 
@@ -76,7 +76,7 @@
 						<div class="col-md-12">
 							<button type="submit" name="action" value="register"
 								class="btn btn-success">Submit</button>
-							<button class="btn btn-light" id="resendotp">Resend OTP</button>
+							<!-- <button class="btn btn-light" id="resendotp">Resend OTP</button> -->
 						</div>
 					</div>
 				</div>

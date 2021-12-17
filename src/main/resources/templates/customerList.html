@@ -4,7 +4,10 @@
 <div th:replace="adminHeader :: adminHeaderAttr"></div>
 
 <!-- External CSS -->
-<link rel="stylesheet" href="" th:href="@{/assets//css/customerList.css}">
+<link rel="stylesheet" href="" th:href="@{/assets/font-awesome-4.5.0/css/customerList.css}">
+
+<link rel="stylesheet" href=""
+			th:href="@{/assets/font-awesome-4.5.0/css/customerUpdateForm.css}">
 
 </head>
 <body>
@@ -33,11 +36,11 @@
 					</th>
 					<th>Password</th>
 					<th>Confirm Password</th>
-					<th>
-						<!-- 						<a th:href="@{'/page/' + ${currentPage} + '?sortField=action&sortDir=' + ${reverseSortDir}}"> -->
-						Contact <!-- </a> -->
+					<!-- <th>
+												<a th:href="@{'/page/' + ${currentPage} + '?sortField=action&sortDir=' + ${reverseSortDir}}">
+						Contact </a>
 					</th>
-					<th>Otp</th>
+					<th>Otp</th> -->
 					<th>Actions</th>
 				</tr>
 			</thead>
@@ -47,8 +50,8 @@
 					<td th:text="${customerVal.email}"></td>
 					<td th:text="${customerVal.password}"></td>
 					<td th:text="${customerVal.confirm_password}"></td>
-					<td th:text="${customerVal.phone}"></td>
-					<td th:text="${customerVal.otp}"></td>
+					<!-- <td th:text="${customerVal.phone}"></td>
+					<td th:text="${customerVal.otp}"></td> -->
 
 					<td><a
 						th:href="@{/showCustomerUpdateForm/{id}(id=${customerVal.id})}">
