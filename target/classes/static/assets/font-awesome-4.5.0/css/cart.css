@@ -4,11 +4,13 @@
 
 body {
 	background-color: #e2e2e2;
+	color : black;
 }
 
 .container {
 	padding-top: 8%;
 	height: 200%;
+	padding:12%;
 }
 
 #title_row{
@@ -16,6 +18,6 @@ padding-bottom:5%;
 }
 
 .header_title{
-	padding-left:400px;
+	padding-left:250px;
 }
 

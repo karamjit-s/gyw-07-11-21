@@ -21,7 +21,7 @@
 
 .img {
 	background: url('img3.jpg') no-repeat;
-	width: 100%;
+	width: 90%;
 	height: 100vh;
 	background-size: cover;
 	background-position: center;
@@ -29,7 +29,6 @@
 }
 
 .img::before {
-	content: '';
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -38,8 +37,8 @@
 
 .center {
 	position: absolute;
-	top: 54%;
-	left: 51%;
+	top: 50%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
 	padding: 0 20px;
