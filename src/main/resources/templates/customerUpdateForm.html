@@ -5,8 +5,6 @@
 
 <!-- External CSS -->
 <!-- External CSS -->
-<link rel="stylesheet" href=""
-	th:href="@{/assets/font-awesome-4.5.0/css/adminHeader.css}">
 
 <link rel="stylesheet" href=""
 	th:href="@{/assets/font-awesome-4.5.0/css/customerUpdateForm.css}">
@@ -60,22 +58,6 @@
 						placeholder="Confirm Password" autocomplete="off">
 				</div>
 			</div>
-			<!-- <div class="form-group row">
-
-				<div class="col-sm-5">
-					<label for="exampleInputPassword1">Phone</label> <input type="tel"
-						th:field="*{phone}" name="phone" id="phone" class="form-control"
-						placeholder="+911234567890" autocomplete="off">
-				</div>
-				
-			</div> -->
-			<!-- 
-			<div class="form-group row">
-				<div class="col-sm-3">
-					<input type="text" name="otp" class="form-control"
-						th:field="*{otp}" placeholder="Enter Otp" autocomplete="off">
-				</div>
-			</div> -->
 
 			<div class="modal-footer d-flex justify-content-center">
 				<div class="row">
@@ -93,7 +75,7 @@
 
 	</div>
 
-	<div th:insert="adminFooter :: adminFooterAttr"></div>
+	<div th:insert="footer :: footerAttr"></div>
 
 </body>
 </html>
