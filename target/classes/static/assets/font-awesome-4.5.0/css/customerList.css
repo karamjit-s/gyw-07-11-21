@@ -23,3 +23,12 @@ body {
 form {
 	padding: 0%;
 }
+
+.container{
+	height:100%;
+	margin-bottom: 50%;
+}
+
+body{
+	height:100%;
+}

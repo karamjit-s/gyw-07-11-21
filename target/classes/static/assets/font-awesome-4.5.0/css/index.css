@@ -38,8 +38,8 @@
 
 .center {
 	position: absolute;
-	top: 52%;
-	left: 50%;
+	top: 54%;
+	left: 51%;
 	transform: translate(-50%, -50%);
 	width: 100%;
 	padding: 0 20px;
@@ -54,7 +54,7 @@
 
 .center .sub_title {
 	color: #476b6b;
-	font-size: 52px;
+	font-size: 50px;
 	font-weight: 600;
 }
 

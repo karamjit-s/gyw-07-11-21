@@ -1,0 +1,195 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="header :: headerAttr"></div>
+
+<!-- External CSS -->
+<link rel="stylesheet" href=""
+	th:href="@{/assets/font-awesome-4.5.0/css/about.css}">
+
+</head>
+<body>
+
+	<div class="main">
+		<h1 class="title">About</h1>
+
+
+		<!-- PortFolio Gallery Grid -->
+
+		<div class="row">
+
+			<div class="column nature">
+				<div class="content">
+					<img src="/assets/image/about/build_platform_about.png"
+						alt="Nature" style="width: 100%">
+					<div class="row" id="price_row">
+						<h4>Build Platform</h4>
+
+					</div>
+					<div class="hoverDiv">Read More...</div>
+					<div class="hide">Build with the world's most intuitive
+						platform Create better websites with mobile-responsive templates,
+						seamless drag & drop and unlimited customization.</div>
+				</div>
+			</div>
+
+			<div class="column people">
+				<div class="content">
+					<img src="/assets/image/about/grow_online_about.png" alt="Car"
+						style="width: 100%">
+					<div class="row" id="price_row">
+						<h4>Grow your business online</h4>
+
+					</div>
+
+					<div class="hoverDiv">Read More...</div>
+					<div class="hide">Grow your online presence Boost traffic and
+						increase engagement with built-in SEO tools, Facebook ads, email
+						marketing and social posts.</div>
+				</div>
+
+				<div class="column people">
+					<div class="content">
+						<img src="/assets/image/about/manage_brand_about.png" alt="Car"
+							style="width: 100%">
+					<div class="row" id="price_row">
+						<h4>Manage your brand</h4>
+
+					</div>
+					<div class="hoverDiv">Read More...</div>
+					<div class="hide">Manage your brand from one place Sell your
+						products or services, start a blog and make smart decisions with
+						clear analytics.</div>
+				</div>
+
+			</div>
+			<!-- END GRID -->
+		</div>
+
+		<!-- END MAIN -->
+	</div>
+
+</div>
+
+	<button onclick="topFunction()" id="goToTopBtn" title="Go to top">
+		<b>Go to top</b>
+	</button>
+
+	<script>
+		//Get the button
+		var mybutton = document.getElementById("goToTopBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {
+			scrollFunction()
+		};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20
+					|| document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+
+
+
+
+	<script>
+		filterSelection("all")
+		function filterSelection(c) {
+			var x, i;
+			x = document.getElementsByClassName("column");
+			if (c == "all")
+				c = "";
+			for (i = 0; i < x.length; i++) {
+				w3RemoveClass(x[i], "show");
+				if (x[i].className.indexOf(c) > -1)
+					w3AddClass(x[i], "show");
+			}
+		}
+
+		function w3AddClass(element, name) {
+			var i, arr1, arr2;
+			arr1 = element.className.split(" ");
+			arr2 = name.split(" ");
+			for (i = 0; i < arr2.length; i++) {
+				if (arr1.indexOf(arr2[i]) == -1) {
+					element.className += " " + arr2[i];
+				}
+			}
+		}
+
+		function w3RemoveClass(element, name) {
+			var i, arr1, arr2;
+			arr1 = element.className.split(" ");
+			arr2 = name.split(" ");
+			for (i = 0; i < arr2.length; i++) {
+				while (arr1.indexOf(arr2[i]) > -1) {
+					arr1.splice(arr1.indexOf(arr2[i]), 1);
+				}
+			}
+			element.className = arr1.join(" ");
+		}
+
+		// Add active class to the current button (highlight it)
+		var btnContainer = document.getElementById("myBtnContainer");
+		var btns = btnContainer.getElementsByClassName("btn");
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].addEventListener("click", function() {
+				var current = document.getElementsByClassName("active");
+				current[0].className = current[0].className.replace(" active",
+						"");
+				this.className += " active";
+			});
+		}
+	</script>
+
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+			coll[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight) {
+					content.style.maxHeight = null;
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+				}
+			});
+		}
+	</script>
+
+	<script>
+		function myFunction() {
+			var dots = document.getElementById("dots");
+			var moreText = document.getElementById("more");
+			var btnText = document.getElementById("myBtn");
+
+			if (dots.style.display === "none") {
+				dots.style.display = "inline";
+				btnText.innerHTML = "Read more";
+				moreText.style.display = "none";
+			} else {
+				dots.style.display = "none";
+				btnText.innerHTML = "Read less";
+				moreText.style.display = "inline";
+			}
+		}
+	</script>
+	
+	
+	<div th:insert="adminFooter :: adminFooterAttr"></div>
+
+</body>
+</html>

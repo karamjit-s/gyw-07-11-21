@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.karam.gyw.model.CartModel;
 import com.karam.gyw.model.GywModel;
+import com.karam.gyw.service.CartService;
 import com.karam.gyw.service.GywService;
 
 @Controller
@@ -20,6 +22,9 @@ public class GywController {
 
 	@Autowired
 	private GywService gywService;
+	
+	@Autowired
+	private CartService cartService;
 	
 	// display list of gywModel
 //	@GetMapping("/")
@@ -96,6 +101,14 @@ public class GywController {
 
 		GywModel gywModel = new GywModel();
 		model.addAttribute("gywModel", gywModel);
+		
+		
+		// create model attribute to bind form data
+				List<CartModel> cartModel1= cartService.getAllCart();		
+				System.out.println("getall cart items " + cartModel1);
+				model.addAttribute("cartAttr", cartModel1);
+				
+				
 		return "designs";
 	}
 	
@@ -114,12 +127,12 @@ public class GywController {
 		return "support";
 	}
 	
-	@GetMapping("/showOrdersPage")
+	@GetMapping("/showCartPage")
 	public String showOrdersPage(Model model) {
 
 		GywModel gywModel = new GywModel();
 		model.addAttribute("gywModel", gywModel);
-		return "orders";
+		return "cart";
 	}
 	
 	@GetMapping("/showProfilePage")
@@ -128,5 +141,13 @@ public class GywController {
 		GywModel gywModel = new GywModel();
 		model.addAttribute("gywModel", gywModel);
 		return "profile";
+	}
+	
+	@GetMapping("/showAboutPage")
+	public String showAboutPage(Model model) {
+
+		GywModel gywModel = new GywModel();
+		model.addAttribute("gywModel", gywModel);
+		return "about";
 	}
 }

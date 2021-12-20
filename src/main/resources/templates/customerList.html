@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<div th:replace="adminHeader :: adminHeaderAttr"></div>
+<div th:replace="header :: headerAttr"></div>
 
 <!-- External CSS -->
 <link rel="stylesheet" href="" th:href="@{/assets/font-awesome-4.5.0/css/customerList.css}">
@@ -88,7 +88,7 @@
 		</div> -->
 	</div>
 
-<div th:insert="adminFooter :: adminFooterAttr"></div>
+<div th:insert="footer :: footerAttr"></div>
 
 </body>
 </html>

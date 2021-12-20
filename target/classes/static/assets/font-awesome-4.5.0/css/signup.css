@@ -13,3 +13,11 @@ body {
 .container {
 	padding-top: 10%;
 }
+
+form{
+	padding:100px;
+}
+
+#submit_div{
+	padding-top:75px;
+}

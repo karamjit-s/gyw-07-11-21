@@ -7,6 +7,15 @@ body {
 }
 
 .container {
-	padding-top: 20%;
-	height: 100%;
+	padding-top: 10%;
+	height: 200%;
 }
+
+#title_row{
+padding-bottom:5%;	
+}
+
+.header_title{
+	padding-left:400px;
+}
+

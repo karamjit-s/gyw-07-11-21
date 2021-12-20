@@ -5,7 +5,8 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<title>GYW</title>
-
+		<link rel="icon" type="/assets/image/x-icon"
+			href="/assets/image/favicon.ico">
 
 		<meta name="viewport"
 			content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,16 +37,17 @@
 
 
 		<!-- External CSS -->
-		<link rel="stylesheet" href="" th:href="@{/assets/font-awesome-4.5.0/css/header.css}">
+		<link rel="stylesheet" href=""
+			th:href="@{/assets/font-awesome-4.5.0/css/header.css}">
 
 		<link rel="stylesheet" href=""
 			th:href="@{/assets/font-awesome-4.5.0/css/customerUpdateForm.css}">
 
 		<nav>
 			<div class="menu">
-				<!-- <a href="/admin">  -->
+				<a href="/">  
 				<img id="imgLogo" src="/assets/image/gyw_logo.png">
-				<!-- </a> -->
+				</a> 
 
 				<ul>
 					<li><a href="/"><i class="fas fa-home"
@@ -58,27 +60,34 @@
 							style='font-size: 21px; color: #00ffff;'></i><span>Services</span></a></li>
 					<li><a href="showSupportPage"><i class="fa fa-lightbulb"
 							style='font-size: 21px; color: #ffff00;'></i><span>Support</span></a></li> -->
-
+					<li><a href="/showCustomerList"><i class="fas fa-users"
+							style='font-size: 22px; color: violet'></i> Your Profiles</a></li>
+					<li><a href="showCartItems"> <i
+							class='fas fa-shipping-fast'
+							style='font-size: 22px; color: orange;'></i> Orders
+					</a></li>
 
 					<li>
 						<div class="dropdown">
 							<button class="dropbtn">
 
-<!-- 								<i class="fas fa-user-circle"
+								<!-- 								<i class="fas fa-user-circle"
 									style='font-size: 25px; margin-top: 0px; color: #ff9999;'></i><i
 									class="fas fa-angle-down"
 									style='font-size: 20px; margin-top: 0px; margin-left: 10px; color: #ffd1b3;'></i> -->
 
-								<img id="ppLogo" src="/assets/image/pplogo.png" style="height:30px; width:30px;">
+								<img id="ppLogo" src="/assets/image/pplogo.png"
+									style="height: 30px; width: 30px;">
 
 							</button>
 							<div class="dropdown-content">
-								<a href="/admin"><i class="fas fa-address-card"
+								<!-- <a href="/admin"><i class="fas fa-address-card"
 									style="font-size: 20px; margin-left: 6px; margin-right: 15px; color: magenta;"></i><span>Profile</span></a>
+ -->
 
-								<a href="showOrdersPage"><i class="	fas fa-shopping-cart"
+								<a href="showCartItems"><i class="	fas fa-shopping-cart"
 									style="font-size: 20px; margin-left: 6px; margin-right: 10px; color: #ffff00;"></i>
-									<span>Orders</span></a> <a href="signup"> <i
+									<span>Cart</span></a> <a href="signup"> <i
 									class="fas fa-user-plus"
 									style="font-size: 20px; margin-left: 6px; margin-right: 8px; color: skyblue;"></i>
 									<span>Sign Up</span>

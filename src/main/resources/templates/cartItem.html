@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<div th:replace="header :: headerAttr"></div>
+
+<link rel="stylesheet" href=""
+	th:href="@{/assets/font-awesome-4.5.0/css/cartItem.css}">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h1 class="title">Add Cart Item</h1>
+		<hr>
+		<h3>Add Card Details</h3>
+
+
+		<div style="padding: 10px">
+			<form autocomplete="off" action="#" th:action="@{/addCardItem}"
+				th:object="${cartAttr}" method="post">
+
+
+				<div class="form-group row">
+
+
+					<div class="col-sm-4">
+						<label for="formGroupExampleInput">Product Name</label> <input
+							th:field="*{product_name}" type="password" name="Product Name"
+							class="form-control" id="formGroupExampleInput"
+							placeholder="Facit Dashboard" autocomplete="off">
+					</div>
+					<div class="col-sm-4">
+						<label for="formGroupExampleInput">Price</label> <input
+							th:field="*{price" type="password" name="price"
+							class="form-control" id="formGroupExampleInput"
+							placeholder="1999" autocomplete="off">
+					</div>
+
+				</div>
+
+				<div class="modal-footer d-flex justify-content-center">
+					<div class="row">
+
+						<div class="col-md-12">
+							<button type="submit" name="action" value="register"
+								class="btn btn-success">Submit</button>
+							<button class="btn btn-light" id="resendotp">Resend OTP</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div> 
+		
+		
+		
+	</div>
+
+	<div th:insert="footer :: footerAttr"></div>
+
+
+</body>
+</html>
+
+

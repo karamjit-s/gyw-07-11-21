@@ -14,7 +14,7 @@
 <h1 class="title">SIGN UP </h1>
 
 
-		<div style="padding: 10px">
+		<div style="padding:0px">
 			<form autocomplete="off" action="#" th:action="@{/signup}" th:object="${customer_attribute}"
 				method="post">
 				<div class="form-group">
@@ -34,13 +34,13 @@
 				</div>
 				
 				<div class="form-group row">
-				<div class="col-sm-5">
+				<div class="col-sm-6">
 					<label for="formGroupExampleInput">Password</label> <input th:field="*{password}"
 						type="password" name="Password" class="form-control"
 						id="formGroupExampleInput" placeholder="Password"
 						autocomplete="off">
 				</div>
-				<div class="col-sm-5">
+				<div class="col-sm-6">
 					<label for="formGroupExampleInput">Confirm Password</label> <input th:field="*{confirm_password}"
 						type="password" name="Confirm Password" class="form-control"
 						id="formGroupExampleInput" placeholder="Confirm Password"
@@ -70,7 +70,7 @@
 
 
 
-				<div class="modal-footer d-flex justify-content-center">
+				<div class="modal-footer d-flex justify-content-center" id="submit_div">
 					<div class="row">
 
 						<div class="col-md-12">
