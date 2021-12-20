@@ -31,44 +31,52 @@
 			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script
 			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="https://kit.fontawesome.com/a076d05399.js"
+			crossorigin="anonymous"></script>
 
 		<link rel="stylesheet"
 			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-			
-<link rel="stylesheet"
+
+		<link rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<link rel="stylesheet"
+		<link rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-
 		<!-- External CSS -->
 		<link rel="stylesheet" href=""
 			th:href="@{/assets/font-awesome-4.5.0/css/header.css}">
 
 		<link rel="stylesheet" href=""
 			th:href="@{/assets/font-awesome-4.5.0/css/customerUpdateForm.css}">
-
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<nav>
 			<div class="menu">
-				<a class="logo_class" href="/">  
-				<img id="imgLogo" src="/assets/image/gyw_logo.png">
-				</a> 
+				<a class="logo_class" href="/"> <img id="imgLogo"
+					src="/assets/image/gyw_logo.png">
+				</a>
 
 				<ul>
-					<li><a href="/"><i class="fas fa-home"
-							style='font-size: 22px; color: #ff0066;'></i> <span>Home</span></a></li>
-					<li><a href="showDesignsPage"><i class="fas fa-gem"
-							style='font-size: 20px; color: lawngreen;'></i><span>Designs</span></a></li>
+
+					<li><a href="/"> <span class="glyphicon glyphicon-home"
+							style='font-size: 22px; color: #ff0066;'></span> <span>Home</span></a></li>
+					<li><a href="showDesignsPage"><i class="material-icons"
+							style='font-size: 22px; color: lawngreen;'>palette</i><span>Designs</span></a></li>
 					<!-- <li><a href="showOffersPage"><i class='fas fa-fire'
 							style='font-size: 22px; color: orange;'></i><span>Offers</span></a></li>
 					<li><a href="showServicesPage"><i class='fas fa-magic'
 							style='font-size: 21px; color: #00ffff;'></i><span>Services</span></a></li>
 					<li><a href="showSupportPage"><i class="fa fa-lightbulb"
 							style='font-size: 21px; color: #ffff00;'></i><span>Support</span></a></li> -->
-					
-					<li><a href="showCartItems"> <i
-							class='fas fa-shipping-fast'
-							style='font-size: 22px; color: orange;'></i> Orders
+
+					<li><a href="showCartItems"> <span
+							class="glyphicon glyphicon-shopping-cart"
+							style='font-size: 22px; color: orange;'></span><span>
+								Orders</span>
 					</a></li>
 
 					<li>
@@ -85,19 +93,19 @@
 
 							</button>
 							<div class="dropdown-content">
-								<a href="/showCustomerList"><i class="fas fa-users"
-							style='font-size: 22px; color: violet'></i>Profiles</a>
-								<a href="showCartItems"><i class="	fas fa-shopping-cart"
-									style="font-size: 20px; margin-left: 6px; margin-right: 10px; color: #ffff00;"></i>
+								<a href="/showCustomerList"><i class="material-icons"
+									style="font-size: 25px; color: violet; margin-left: 6px; margin-right: 10px;">group</i>Profiles</a>
+								<a href="showCartItems"><i class="material-icons"
+									style="font-size: 25px; margin-left: 6px; margin-right: 10px; color: #ffff00;">add_shopping_cart</i>
 									<span>Cart</span></a> <a href="signup"> <i
-									class="fas fa-user-plus"
-									style="font-size: 20px; margin-left: 6px; margin-right: 8px; color: skyblue;"></i>
+									class="material-icons"
+									style="font-size: 25px; margin-left: 6px; margin-right: 1px; color: skyblue;">person_add</i>
 									<span>Sign Up</span>
-								</a> <a href="login"> <i class="fas fa-chalkboard-teacher"
-									style="font-size: 20px; margin-left: 6px; margin-right: 10px; color: lawngreen;"></i>
+								</a> <a href="login"> <i class="material-icons"
+									style="font-size: 25px; margin-left: 6px; margin-right: 10px; color: lawngreen;">account_box</i>
 									<span>Log In</span>
-								</a> <a href="/"><i class="fas fa-power-off"
-									style="font-size: 22px; margin-left: 6px; margin-right: 11px; color: red"></i>
+								</a> <a href="/"><i class="material-icons"
+									style="font-size: 25px; margin-left: 6px; margin-right: 11px; color: red">exit_to_app</i>
 									<span>Log Out</span> </a>
 							</div>
 						</div>
