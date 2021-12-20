@@ -11,10 +11,10 @@
 
 
 	<div class="container">
-	
-		<div class="row" id="title_row" >
-			<a class="a_back_btn" th:href="@{/}"> <i id="i_back_btn"
-				class="fas fa-arrow-circle-left"></i>
+
+		<div class="row" id="title_row">
+			<a class="a_back_btn" th:href="@{/}" style="margin-top: 15px;"> <i
+				id="i_back_btn" class="fas fa-arrow-circle-left"></i>
 			</a>
 			<h3 class="header_title">Cart Items</h3>
 		</div>
@@ -35,26 +35,23 @@
 					<td th:text="${customerVal.price}"></td>
 
 					<td>
-					<!-- <a th:href=""> -->
-					<i
-							class="material-icons" style="font-size: 35px; color: red">delete</i>
-					<!-- </a> -->
+						<!-- <a th:href=""> --> <i class="material-icons"
+						style="font-size: 35px; color: red">delete</i> <!-- </a> -->
 					</td>
 				</tr>
 			</tbody>
 		</table>
 
-<div class="modal-footer d-flex justify-content-center">
-					<div class="row">
+		<div class="modal-footer d-flex justify-content-center">
+			<div class="row">
 
-						<div class="col-md-12">
-							<a href="checkoutPageShow">
-							<button type="submit" name="action" 
-								class="btn btn-success">Checkout</button>
-								</a>
-						</div>
-					</div>
+				<div class="col-md-12">
+					<a href="checkoutPageShow">
+						<button type="submit" name="action" class="btn btn-success">Checkout</button>
+					</a>
 				</div>
+			</div>
+		</div>
 
 	</div>
 

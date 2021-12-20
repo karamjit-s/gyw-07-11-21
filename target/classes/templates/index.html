@@ -3,7 +3,9 @@
 <head>
 <div th:replace="header :: headerAttr"></div>
 
-<link rel="stylesheet" href="" th:href="@{/assets/font-awesome-4.5.0/css/index.css}">
+
+<link rel="stylesheet" href=""
+	th:href="@{/assets/font-awesome-4.5.0/css/index.css}">
 <link rel="icon" type="image/x-icon" href="/assets/image/favicon.ico">
 
 </head>
@@ -11,27 +13,32 @@
 <body>
 
 
+
+
+
+
+
 	<div class="img"></div>
 	<div class="center">
 		<div class="title">Get Your Website</div>
 		<div class="sub_title">Only Website Shopping Plaform</div>
 		<div class="btns">
-			<a href="showAboutPage"><button class="about_btn" style="color:black; background-color:skyblue">Learn More</button></a>
+			<a href="showAboutPage"><button class="about_btn"
+					style="color: black; background-color: skyblue">Learn More</button></a>
 			<button onclick="myFunction()" class="sub_btn">Subscribe</button>
 		</div>
 	</div>
 
-<div th:insert="footer :: footerAttr"></div>
 
-<button onclick="myFunction()">Try it</button>
+	<button onclick="myFunction()"></button>
+	<script>
+		function myFunction() {
+			var a = confirm("Successfully ! You've Subscribed to Gyw.");
+			console.log(a)
+		}
+	</script>
+
+	<div th:insert="footer :: footerAttr"></div>
+
 </body>
-
-<script>
-function myFunction() {
-    var a = confirm("Successfully ! You've Subscribed to Gyw.");
-    console.log(a)
-}
-</script>
-
-
 </html>

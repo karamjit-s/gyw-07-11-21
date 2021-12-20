@@ -10,14 +10,16 @@ body {
 	padding-top: 0%;
 }
 
+
 .header_title {
-	padding-left: 350px;
-	padding-top: 0px;
+	padding-left: 340px;
+	padding-top: 15px;
+	padding-bottom: 40px;
 }
 
 .a_back_btn {
 	font-size: 50px;
-	padding-left: 10px;
+	padding-left: 45px;
 }
 
 form {
