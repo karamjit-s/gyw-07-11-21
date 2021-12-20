@@ -10,7 +10,7 @@ body {
 .container {
 	padding-top: 8%;
 	height: 200%;
-	padding:12%;
+	width:100%;
 }
 
 #title_row{
@@ -18,6 +18,6 @@ padding-bottom:5%;
 }
 
 .header_title{
-	padding-left:250px;
+	padding-left:400px;
 }
 

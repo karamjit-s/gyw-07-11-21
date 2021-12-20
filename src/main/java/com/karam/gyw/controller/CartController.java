@@ -29,9 +29,11 @@ public class CartController {
 	public String showCartItems(Model model) {
 
 		// create model attribute to bind form data
-		List<CartModel> cartModel1 = cartService.getAllCart();
-		System.out.println("getall cart items " + cartModel1);
-		model.addAttribute("cartAttr", cartModel1);
+		/*
+		 * List<CartModel> cartModel1 = cartService.getAllCart();
+		 * System.out.println("getall cart items " + cartModel1);
+		 * model.addAttribute("cartAttr", cartModel1);
+		 */
 
 		return "cart";
 	}

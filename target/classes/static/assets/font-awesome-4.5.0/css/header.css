@@ -19,7 +19,7 @@ span {
 	background: #fff;
 }
 .logo_class{
-	margin-left: 170px;
+	margin-left: 0px;
 }
 
 
@@ -59,7 +59,7 @@ nav .menu {
 }
 
 .menu ul li:first-child {
-	margin-left: 50px;
+	margin-left: 250px;
 }
 
 .menu ul li a {
