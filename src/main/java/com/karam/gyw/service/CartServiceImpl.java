@@ -31,8 +31,8 @@ public class CartServiceImpl implements CartService{
 	@Override
 	public CartModel saveCartItems(String product_name, String price) {
 		
-		String product_name_value =product_name;
-		String price_value = price;
+		String product_name_value ="Facit Dark Theme";
+		String price_value = "19.99";
 		
 		CartModel cartModel = new CartModel();
 		cartModel.setProduct_name(product_name_value);
