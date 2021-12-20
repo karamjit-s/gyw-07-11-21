@@ -9,6 +9,8 @@ body {
 .container {
 	padding-top: 10%;
 	padding-bottom: 15%;
+	height:200%;
+	width:100%
 }
 
 .title {
@@ -18,10 +20,12 @@ body {
 .form-group {
 	width: 50%;
 	margin-left: 26%;
+
 }
 
 .form {
-	padding: 5%;
+	padding: 0%;
+		height:100%;
 }
 
 .modal-footer {

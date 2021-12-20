@@ -26,7 +26,7 @@ public class CartController {
 	}
 
 	@GetMapping("/showCartItems")
-	public String showCartItems(Model model) {
+	public String showCartItems() {
 
 		// create model attribute to bind form data
 		/*
