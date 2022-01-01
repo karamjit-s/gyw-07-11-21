@@ -28,7 +28,7 @@ span {
 	height: 70px;
 	padding-bottom: 12px;
 	padding-top: 2px;
-	margin-left: 70px;
+	margin-left: 40px;
 }
 
 nav {
@@ -59,7 +59,7 @@ nav .menu {
 }
 
 .menu ul li:first-child {
-	margin-left: 250px;
+	margin-left: 100px;
 }
 
 .menu ul li a {
