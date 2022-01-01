@@ -47,13 +47,13 @@
 
 .center .title {
 	color: #00001a;
-	font-size: 55px;
+	font-size: 35px;
 	font-weight: 600;
 }
 
 .center .sub_title {
 	color: #476b6b;
-	font-size: 50px;
+	font-size: 30px;
 	font-weight: 600;
 }
 
@@ -62,8 +62,8 @@
 }
 
 .center .btns button {
-	height: 55px;
-	width: 170px;
+	height: 45px;
+	width: 140px;
 	border-radius: 5px;
 	border: none;
 	margin: 0 10px;
