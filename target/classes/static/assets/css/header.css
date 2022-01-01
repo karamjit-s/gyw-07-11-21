@@ -10,7 +10,7 @@ body {
 nav {
 	background: #170017;
 	height: 80px;
-	width: 200%;
+	width:1000%;
 	position: fixed;
 	z-index: 1;
 }
