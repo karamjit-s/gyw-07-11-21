@@ -1,71 +1,52 @@
 <html>
+
 <body>
 	<div th:fragment="headerAttr">
 
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<title>GYW</title>
-		<link rel="icon" type="/assets/image/x-icon"
-			href="/assets/image/favicon.ico">
+		<link rel="icon" type="/assets/image/x-icon" href="/assets/image/favicon.ico">
 
-		<meta name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Bootstrap CSS -->
 
 
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet">
-		<link rel="stylesheet" type="text/css"
-			href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
 
-		<link
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-			rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet">
-		<script src='https://kit.fontawesome.com/a076d05399.js'
-			crossorigin='anonymous'></script>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-		<script
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-		<script src="https://kit.fontawesome.com/a076d05399.js"
-			crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-		<link rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 		<link rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 
-		<link rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
 		<!-- External CSS -->
-		<link rel="stylesheet" href=""
-			th:href="@{/assets/font-awesome-4.5.0/css/header.css}">
+		<link rel="stylesheet" href="" th:href="@{/assets/font-awesome-4.5.0/css/header.css}">
 
-		<link rel="stylesheet" href=""
-			th:href="@{/assets/font-awesome-4.5.0/css/customerUpdateForm.css}">
-		<link rel="stylesheet"
-			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="" th:href="@{/assets/font-awesome-4.5.0/css/customerUpdateForm.css}">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<nav>
 			<div class="menu">
-				<a class="logo_class" href="/"> <img id="imgLogo"
-					src="/assets/image/gyw_logo.png">
-				</a>
+				<img id="imgLogo" src="/assets/image/gyw_logo.png">
 
 				<ul>
 
 					<li><a href="/"> <span class="glyphicon glyphicon-home"
-							style='font-size: 22px; color: #ff0066;'></span> <span>Home</span></a></li>
+								style='font-size: 22px; color: #ff0066;'></span> <span>Home</span></a></li>
 					<li><a href="showDesignsPage"><i class="material-icons"
-							style='font-size: 22px; color: lawngreen;'>palette</i><span>Designs</span></a></li>
+								style='font-size: 22px; color: lawngreen;'>palette</i><span>Designs</span></a></li>
 					<!-- <li><a href="showOffersPage"><i class='fas fa-fire'
 							style='font-size: 22px; color: orange;'></i><span>Offers</span></a></li>
 					<li><a href="showServicesPage"><i class='fas fa-magic'
@@ -73,36 +54,27 @@
 					<li><a href="showSupportPage"><i class="fa fa-lightbulb"
 							style='font-size: 21px; color: #ffff00;'></i><span>Support</span></a></li> -->
 
-					<li><a href="signup"> <span
-							class="fa fa-user-plus"
-							style='font-size: 25px; color: skyblue;'></span><span>Sign Up</span>
-					</a></li>
-					
+					<li><a href="signup"> <span class="fa fa-user-plus"
+								style='font-size: 25px; color: skyblue;'></span><span>Sign Up</span>
+						</a></li>
+
 
 					<li>
 						<div class="dropdown">
-							<button class="dropbtn">
-
-								<!-- 								<i class="fas fa-user-circle"
-									style='font-size: 25px; margin-top: 0px; color: #ff9999;'></i><i
-									class="fas fa-angle-down"
-									style='font-size: 20px; margin-top: 0px; margin-left: 10px; color: #ffd1b3;'></i> -->
-
-								<img id="ppLogo" src="/assets/image/pplogo.png"
-									style="height: 30px; width: 30px;">
-
+							<button class="dropbtn" >
+								<i class='fas fa-user-circle' style="font-size:30px; color:rgb(255, 0, 0);"></i>
 							</button>
 							<div class="dropdown-content">
 								<a href="/showCustomerList"><i class="material-icons"
-									style="font-size: 25px; color: violet; margin-left: 6px; margin-right: 10px;">group</i>Profiles</a>
+										style="font-size: 25px; color: violet; margin-left: 6px; margin-right: 10px;">group</i>Profiles</a>
 								<a href="showCartItems"><i class="glyphicon glyphicon-shopping-cart"
-									style="font-size: 25px; margin-left: 6px; margin-right: 10px; color: orange;"></i>
-									<span>Cart</span></a> 
-									<a href="login"> <i class="material-icons"
-									style="font-size: 25px; margin-left: 6px; margin-right: 10px; color: lawngreen;">account_box</i>
+										style="font-size: 25px; margin-left: 6px; margin-right: 10px; color: orange;"></i>
+									<span>Cart</span></a>
+								<a href="login"> <i class="material-icons"
+										style="font-size: 25px; margin-left: 6px; margin-right: 10px; color: lawngreen;">account_box</i>
 									<span>Log In</span>
 								</a> <a href="/"><i class="material-icons"
-									style="font-size: 25px; margin-left: 6px; margin-right: 11px; color: red">exit_to_app</i>
+										style="font-size: 25px; margin-left: 6px; margin-right: 11px; color: red">exit_to_app</i>
 									<span>Log Out</span> </a>
 							</div>
 						</div>
@@ -122,5 +94,5 @@
 
 
 </body>
-</html>
 
+</html>
