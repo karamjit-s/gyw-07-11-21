@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-	
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap')
+	;
+
 * {
 	list-style: none;
 	box-sizing: border-box;
 }
 
 body {
-font-family: 'Poppins', sans-serif;}
+	font-family: 'Poppins', sans-serif;
+}
 
 nav {
 	background: #170017;
@@ -19,32 +22,12 @@ nav {
 nav .menu {
 	margin: auto;
 	display: table-row-group;
-	align-items: center; 
-	justify-content: space-between; 
+	align-items: center;
+	justify-content: space-between;
 }
 
-
-
-.menu ul {
+nav ul {
 	display: inline-flex;
-}
-
-.menu ul li {
-	padding-top: 0px;
-	list-style: none;
-}
-
-#li-first-child {
-	margin-left: 0px;
-}
-
-.menu ul li a {
-	text-decoration: none;
-	color: #fff;
-	font-size: 20px;
-	font-weight: 500;
-	border-radius: 5px;
-	transition: all 0.3s ease;
 }
 
 .menu ul li a:hover {
@@ -56,26 +39,32 @@ label.logo {
 	color: rgb(252, 1, 77);
 	font-size: 30px;
 	line-height: 75px;
-	padding: 0 20px;
+	padding: 0 40px;
 	font-weight: bold;
 }
 
 nav ul li {
+	padding-top: 0px;
+	list-style: none;
 	display: inline-block;
 	margin: 10 10px;
 }
+
 nav ul li a {
-	color: white;
-	font-size: 17px;
-	padding: 5px 5px;
-	border-radius: 3px;
-}
-a.active, a:hover {
-	background: white;
-	color:black;
-	transition: .5s;
+	padding: 5px 15px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 500;
+	border-radius: 5px;
+	transition: all 0.3s ease;
 }
 
+a.active, a:hover {
+	background: white;
+	color: black;
+	transition: .5s;
+}
 
 /* Dropdown Css Starts Here */
 
@@ -90,23 +79,21 @@ a.active, a:hover {
 	height: 28px;
 	border-radius: 50px;
 	transition: all 0.3s ease;
-		
 	margin-left: 60px;
-} 
+}
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
 	position: relative;
 	display: inline-block;
-	color:white;
+	color: white;
 	border-radius: 5px;
-	
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
 	margin-left: 0px;
-	color:white;
+	color: white;
 	display: none;
 	position: absolute;
 	background-color: #170017;
@@ -118,34 +105,29 @@ a.active, a:hover {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-	color: #170017;
 	padding: 10px 25px;
 	text-decoration: none;
 	display: block;
+	color: white;
 }
+
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-	background-color: #170017;
+	background-color: white;
 	color:black;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
 	display: block;
-	color: black;
+	color: white;
 	background: #170017;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
 	background-color: white;
-	color: black;
+	color: #170017;
 	border-radius: 5px;
 }
-
-
-
-
-
-
