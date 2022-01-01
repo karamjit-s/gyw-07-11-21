@@ -51,7 +51,6 @@ nav .menu {
 	padding-top: 30px;
 	list-style: none;
 	margin-left: 15px;
-	padding-right:10px;
 }
 
 #li-first-child {
@@ -89,11 +88,11 @@ nav .menu {
 	border: none;
 	cursor: pointer;
 	width: 180px;
-	height: 35px;
+	height: 30px;
 	border-radius: 0px;
 	transition: all 0.3s ease;
 		
-	margin-left: 400px;
+	margin-left: 0px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -106,7 +105,7 @@ nav .menu {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-	margin-left: 400px;
+	margin-left: 0px;
 	
 	display: none;
 	position: absolute;
