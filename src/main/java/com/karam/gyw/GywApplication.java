@@ -10,4 +10,6 @@ public class GywApplication {
 		SpringApplication.run(GywApplication.class, args);
 	}
 
+	
+	
 }
