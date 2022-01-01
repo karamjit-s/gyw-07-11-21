@@ -13,9 +13,15 @@
 
 	<div class="container">
 		<div class="row">
-			<a class="a_back_btn" th:href="@{/admin}"> <i id="i_back_btn"
+			<!-- <a class="a_back_btn" th:href="@{/admin}"> <i id="i_back_btn"
 				class="fas fa-arrow-circle-left"></i>
+			</a> -->
+
+			<a href="a_back_btn" th:href="@{/admin}"
+				style="font-size: 40px; margin-top: 30px; margin-left: 20px;"> <span
+				class="glyphicon glyphicon-circle-arrow-left"></span>
 			</a>
+
 			<h3 class="header_title">Customers Details</h3>
 		</div>
 
@@ -49,14 +55,11 @@
 					<td th:text="${customerVal.email}"></td>
 					<td th:text="${customerVal.password}"></td>
 					<td th:text="${customerVal.confirm_password}"></td>
-					<td>
-					<a
+					<td><a
 						th:href="@{/showCustomerUpdateForm/{id}(id=${customerVal.id})}">
 							<i class="material-icons"
 							style="font-size: 32px; margin-right: 15px;">border_color</i>
-					</a> 
-					
-					 <a th:href="@{/deleteCustomer/{id}(id=${customerVal.id})}"><i
+					</a> <a th:href="@{/deleteCustomer/{id}(id=${customerVal.id})}"><i
 							class="material-icons" style="font-size: 35px; color: red">delete</i>
 					</a></td>
 				</tr>
@@ -65,7 +68,7 @@
 
 	</div>
 
-<div th:insert="footer :: footerAttr"></div>
+	<div th:insert="footer :: footerAttr"></div>
 
 </body>
 </html>

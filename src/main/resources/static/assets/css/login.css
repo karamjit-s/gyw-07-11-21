@@ -4,12 +4,12 @@
 
 body {
 	background-color: #e2e2e2;
-	min-height:1200px;
+	height:1200px;
 }
 
 .container {
 	padding-top: 10%;
-	padding-bottom: 15%;
+	padding-bottom: 0%;
 	height:100%;
 	width:100%
 }
