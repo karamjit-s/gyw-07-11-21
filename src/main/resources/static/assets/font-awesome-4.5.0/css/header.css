@@ -37,8 +37,6 @@ nav {
 }
 
 nav .menu {
-	max-width: 20000px;
-	min-width: 20000px;
 	margin: auto;
 	display: table-row-group;
 	/* align-items: center; */
@@ -56,7 +54,7 @@ nav .menu {
 }
 
 #li-first-child {
-	margin-left: 250px;
+	margin-left: 50px;
 }
 
 .menu ul li a {
@@ -93,7 +91,8 @@ nav .menu {
 	height: 30px;
 	border-radius: 0px;
 	transition: all 0.3s ease;
-	margin-left: 180px;
+		
+	margin-left: 400px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -106,8 +105,8 @@ nav .menu {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-		margin-left: 180px;
-
+	margin-left: 400px;
+	
 	display: none;
 	position: absolute;
 	background-color: #170017;
