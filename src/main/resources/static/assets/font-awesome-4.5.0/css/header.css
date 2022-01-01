@@ -25,7 +25,7 @@ span {
 	padding-bottom: 12px;
 	padding-top: 2px;
 	margin-top: 12px;
-	margin-left: 60px;
+	margin-left: 20px;
 }
 
 nav {
@@ -39,8 +39,8 @@ nav {
 nav .menu {
 	margin: auto;
 	display: table-row-group;
-	/* align-items: center; */
-	/* justify-content: space-between; */
+	align-items: center; 
+	justify-content: space-between; 
 }
 
 .menu ul {
@@ -51,6 +51,7 @@ nav .menu {
 	padding-top: 30px;
 	list-style: none;
 	margin-left: 15px;
+	padding-right:10px;
 }
 
 #li-first-child {
@@ -88,7 +89,7 @@ nav .menu {
 	border: none;
 	cursor: pointer;
 	width: 180px;
-	height: 30px;
+	height: 35px;
 	border-radius: 0px;
 	transition: all 0.3s ease;
 		
