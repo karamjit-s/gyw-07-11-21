@@ -11,11 +11,39 @@
 body {
 	font-family: montserrat;
 }
+
+
+
 nav {
 	background: #170017;
 	height: 80px;
 	width: 100%;
 }
+
+nav {
+	background: #170017;
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+}
+
+nav .menu {
+	margin: auto;
+	display: table-row-group;
+	align-items: center; 
+	justify-content: space-between; 
+}
+
+.menu ul {
+	display: inline-flex;
+}
+
+.menu ul li {
+	list-style: none;
+}
+
+
 label.logo {
 	color: rgb(252, 1, 77);
 	font-size: 35px;
