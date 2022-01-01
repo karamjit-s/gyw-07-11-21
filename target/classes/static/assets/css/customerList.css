@@ -1,0 +1,38 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap')
+	;
+
+body {
+	background-color: #e2e2e2;
+	min-height:1200px;
+}
+
+#main_div {
+	padding-top: 0%;
+}
+
+
+.header_title {
+	padding-left: 220px;
+	padding-top: 15px;
+	padding-bottom: 40px;
+}
+
+.a_back_btn {
+	font-size: 50px;
+	padding-left: 45px;
+}
+
+form {
+	padding: 0%;
+}
+
+.container{
+	height:100%;
+	width:100%;
+	margin-bottom: 50%;
+}
+
+body{
+	height:100%;
+}

@@ -4,7 +4,7 @@
 
 <!-- External CSS -->
 <link rel="stylesheet" href=""
-	th:href="@{/assets/font-awesome-4.5.0/css/cart.css}">
+	th:href="@{/assets/css/cart.css}">
 
 </head>
 <body>
@@ -13,9 +13,14 @@
 	<div class="container">
 
 		<div class="row" id="title_row">
-			<a class="a_back_btn" th:href="@{/}" style="margin-top: 15px;"> <i
+		<!-- 	<a class="a_back_btn" th:href="@{/}" style="margin-top: 15px;"> <i
 				id="i_back_btn" class="fas fa-arrow-circle-left"></i>
-			</a>
+			</a> -->
+			
+			<a href="a_back_btn" style="font-size:40px; margin-top: 30px; margin-left:20px;">
+          <span class="glyphicon glyphicon-circle-arrow-left"></span>
+        </a>
+        
 			<h3 class="header_title">Cart Items</h3>
 		</div>
 

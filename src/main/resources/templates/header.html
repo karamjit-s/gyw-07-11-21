@@ -31,12 +31,77 @@
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
 		<!-- External CSS -->
-		<link rel="stylesheet" href="" th:href="@{/assets/font-awesome-4.5.0/css/header.css}">
-
-		<link rel="stylesheet" href="" th:href="@{/assets/font-awesome-4.5.0/css/customerUpdateForm.css}">
+		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<link rel="stylesheet" href="" th:href="@{/assets/css/header.css}">
+
+		<link rel="stylesheet" href="" th:href="@{/assets/css/customerUpdateForm.css}">
+
+
+
+
+
+
+
+
+
+
+
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+				<i class="fas fa-bars"></i>
+			</label>
+			<label class="logo">GYW</label>
+
+			<ul>
+
+				<li> <a href="/"> <i class="glyphicon glyphicon-home"
+							style="font-size: 15px; margin-left: 6px; margin-right: 10px; color: rgb(255, 0, 51);"></i>
+						<span>Home</span>
+					</a>
+				</li>
+
+				<li><a href="showDesignsPage"> <span class="glyphicon glyphicon-fire"
+							style="font-size: 15px; margin-left: 6px; margin-right: 10px; color: orange;"></span><span>Designs</span></a>
+				</li>
+				<li><a href="showCartItems"> <span class="glyphicon glyphicon-shopping-cart"
+							style="font-size: 15px; margin-left: 6px; margin-right: 10px; color: rgb(0, 255, 128);"></span><span>Orders</span></a>
+				</li>
+
+				<li><a href="showCustomerList"> <span class="glyphicon glyphicon-knight"
+							style="font-size: 16px; margin-left: 6px; margin-right: 10px; color: violet;"></span><span>profiles</span></a>
+				</li>
+				
+				<li><a href="signup"> <span class="glyphicon glyphicon-user"
+							style="font-size: 15px; margin-left: 6px; margin-right: 10px; color: rgb(83, 169, 255);"></span><span>SignUp</span></a>
+				</li>
+				
+				<li><a href="login"> <span class="glyphicon glyphicon-log-in"
+							style="font-size: 16px; margin-left: 6px; margin-right: 10px; color: rgb(255, 255, 0);"></span><span>LogIn</span></a>
+				</li>
+			
+				
+			</ul>
+
+
+
+		</nav>
+
+
+
+
+
+
+		<!--
+		
+		
 		<nav>
 			<div class="menu">
 				<img id="imgLogo" src="/assets/image/gyw_logo.png">
@@ -77,11 +142,47 @@
 			</div>
 		</nav>
 
+
+-->
+
+
+
 	</div>
 
 
 
 
+	<script>
+		// Dropdown Menu
+		var dropdown = document.querySelectorAll('.dropdown');
+		var dropdownArray = Array.prototype.slice.call(dropdown, 0);
+		dropdownArray.forEach(function (el) {
+			var button = el.querySelector('a[data-toggle="dropdown"]'),
+				menu = el.querySelector('.dropdown-menu'),
+				arrow = button.querySelector('i.icon-arrow');
+
+			button.onclick = function (event) {
+				if (!menu.hasClass('show')) {
+					menu.classList.add('show');
+					menu.classList.remove('hide');
+					arrow.classList.add('open');
+					arrow.classList.remove('close');
+					event.preventDefault();
+				}
+				else {
+					menu.classList.remove('show');
+					menu.classList.add('hide');
+					arrow.classList.remove('open');
+					arrow.classList.add('close');
+					event.preventDefault();
+				}
+			};
+		})
+
+		Element.prototype.hasClass = function (className) {
+			return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+		};
+	</script>
 
 </body>
 

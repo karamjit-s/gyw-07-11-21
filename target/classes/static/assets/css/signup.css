@@ -1,0 +1,26 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap')
+	;
+
+body {
+	background-color: #e2e2e2;
+	min-height:1200px;
+}
+
+.title {
+	padding-left: 470px;
+}
+
+.container {
+	padding-top: 10%;
+	height:100%;
+	width:100%
+}
+
+form{
+	padding:10px;
+}
+
+#submit_div{
+	padding-top:75px;
+}
