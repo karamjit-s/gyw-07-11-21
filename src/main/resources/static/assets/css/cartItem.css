@@ -4,6 +4,7 @@
 
 body {
 	background-color: #e2e2e2;
+	height: 1200px;
 }
 
 .title {
@@ -12,5 +13,5 @@ body {
 
 .container {
 	padding-top: 10%;
-	height:1000px;;
+	height: 1000px;;
 }

@@ -4,13 +4,14 @@
 
 body {
 	background-color: #e2e2e2;
-	min-height:1200px;
+	height:1200px;
 }
 
 #main_div {
 	padding-top: 0%;
 }
-
+ h3{
+ margin-left:180px;}
 
 .header_title {
 	padding-left: 220px;

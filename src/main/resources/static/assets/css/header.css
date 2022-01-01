@@ -24,6 +24,7 @@ nav {
  */
 nav ul {
 	display: inline-flex;
+	width:70%;
 }
 
 .menu ul li a:hover {

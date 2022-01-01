@@ -4,10 +4,12 @@
 
 body {
 	background-color: #e2e2e2;
+	height:200%;
 }
 
 .container {
 	padding-top: 8%;
+	height:1200px;;
 }
 
 .header_title {
