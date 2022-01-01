@@ -14,12 +14,12 @@ body {
 	max-width: 1000px;
 	min-height: 3500px;
 	margin: auto;
-	padding-top: 100px;
 	padding:25px;
 }
 
 .title {
 	padding-left: 300px;
+	padding-top:100px;
 }
 
 h1 {
