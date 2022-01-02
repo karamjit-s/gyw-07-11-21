@@ -150,4 +150,14 @@ public class GywController {
 		model.addAttribute("gywModel", gywModel);
 		return "about";
 	}
+	
+	@GetMapping("/showContactPage")
+	public String showContactPage(Model model) {
+
+		GywModel gywModel = new GywModel();
+		model.addAttribute("gywModel", gywModel);
+		return "contact";
+	}
+	
+	
 }

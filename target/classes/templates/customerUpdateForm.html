@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="header">
 <head>
-<div th:replace="header :: headerAttr"></div>
 
 <!-- External CSS -->
 <!-- External CSS -->
@@ -11,6 +11,7 @@
 
 </head>
 <body>
+<div layout:fragment="content">
 	<div class="container">
 		<div class="row">
 
@@ -78,7 +79,6 @@
 
 	</div>
 
-	<div th:insert="footer :: footerAttr"></div>
-
+</div>
 </body>
 </html>

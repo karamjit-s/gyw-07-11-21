@@ -1,7 +1,66 @@
-<html>
-<body>
+<!-- 
+<!DOCTYPE html>
+Created By CodingLab - www.codinglabweb.com
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><body>
 
-	<div id="footer" th:fragment="footerAttr">
+<div id="footer" th:fragment="footerAttr">
+
+    <meta charset="UTF-8">
+    <title> Responsive Footer | CodingLab</title>-
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   
+
+	
+		Optional JavaScript
+		jQuery first, then Popper.js, then Bootstrap JS
+
+		<script type="text/javascript"
+			src="/webjars/jquery/3.4.0/jquery.min.js"></script>
+		<script type="text/javascript"
+			src="/webjars/popper.js/1.15.0/popper.min.js"></script>
+		<script type="text/javascript"
+			src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+		External CSS
+		<link rel="stylesheet" href="" th:href="@{/assets/css/footer.css}">
+
+
+		<div class="span_div">
+
+
+
+			<i class="fa fa-copyright"
+				style="font-size: 15px;  color: grey;"></i> <span
+				style="font-size: 15px; ">Get You Website 2021</span>
+		</div> 
+
+	
+
+
+</div>
+</body>
+</html>
+
+
+ -->
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+
+<div id="footer" th:fragment="footerAttr">
+
+    <meta charset="UTF-8">
+    <!--<title> Responsive Footer | CodingLab</title>--->
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   
+
+	
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
@@ -17,16 +76,71 @@
 		<link rel="stylesheet" href="" th:href="@{/assets/css/footer.css}">
 
 
-		<div class="span_div">
+<body>
+<footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <i class="fab fa-slack"></i>
+          <span class="logo_name">GYW</span>
+        </div>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Company</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Get started</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Services</li>
+          <li><a href="#">App design</a></li>
+          <li><a href="#">Web design</a></li>
+          <li><a href="#">Logo design</a></li>
+          <li><a href="#">Banner design</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Account</li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">My account</a></li>
+          <li><a href="#">Prefrences</a></li>
+          <li><a href="#">Purchase</a></li>
+        </ul>
+        <!-- <ul class="box">
+          <li class="link_name">Courses</li>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Photoshop</a></li>
+        </ul> -->
+        <ul class="box input-box">
+          <li class="link_name">Subscribe</li>
+          <li><input type="text" placeholder="Enter your email"></li>
+          <li><input type="button" value="Subscribe"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2021 <a href="/">GYW.</a>All rights reserved</span>
+        <span class="policy_terms">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms & condition</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+		</body>	
+</div>
 
-
-
-			<i class="fa fa-copyright"
-				style="font-size: 15px;  color: grey;"></i> <span
-				style="font-size: 15px; ">Get You Website 2021</span>
-		</div>
-
-	</div>
-
-</body>
 </html>
+
+

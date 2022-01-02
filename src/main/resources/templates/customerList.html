@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="header">
 <head>
-<div th:replace="header :: headerAttr"></div>
 
 <!-- External CSS -->
 <link rel="stylesheet" href="" th:href="@{/assets/css/customerList.css}">
@@ -10,14 +10,14 @@
 
 </head>
 <body>
-
+<div layout:fragment="content">
 	<div class="container">
 		<div class="row" style="margin-top: 100px;">
 			<!-- <a class="a_back_btn" th:href="@{/admin}"> <i id="i_back_btn"
 				class="fas fa-arrow-circle-left"></i>
 			</a> -->
 
-			<a href="a_back_btn" th:href="@{/admin}"
+			<a href="a_back_btn" th:href="@{/}"
 				style="font-size: 40px; margin-top: 30px; margin-left: 20px;"> <span
 				class="glyphicon glyphicon-circle-arrow-left"></span>
 			</a>
@@ -68,7 +68,6 @@
 
 	</div>
 
-	<div th:insert="footer :: footerAttr"></div>
-
+</div>
 </body>
 </html>

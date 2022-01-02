@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-	padding-top: 0%;
+	padding: 0 10%;
 	height: 100%;
 	width:100%;
 }
@@ -20,6 +20,6 @@ width:100%;
 }
 
 .header_title{
-	padding-left:470px;
+	padding-left:370px;
 }
 

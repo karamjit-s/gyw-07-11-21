@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="header">
 <head>
 
-	<div th:replace="header :: headerAttr"></div>
+	<!-- <div th:replace="header :: headerAttr"></div> -->
 
 <!-- External CSS -->
 <link rel="stylesheet" href="" th:href="@{/assets/css/login.css}">
@@ -10,14 +11,15 @@
 </head>
 
 <body>
-
+<div layout:fragment="content">
+<h1 class="title">LOG IN</h1>
 	<div class="container" >
 
 		<!-- 
 th:action="@{/verifyCustomer}" -->
 
 		<div>
-			<h1 class="title">LOG IN</h1>
+			
 			<form class="form" autocomplete="off" action="#" th:action="@{/verifyCustomer}" th:object="${customer_attribute}"
 				method="post">
 				<div class="form-group">
@@ -55,11 +57,11 @@ th:action="@{/verifyCustomer}" -->
 	</div>
 
 
-	<div th:insert="footer :: footerAttr"></div>
+<!-- 	<div th:insert="footer :: footerAttr"></div> -->
 
 
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 		crossorigin="anonymous"></script>
 	<script
@@ -73,45 +75,8 @@ th:action="@{/verifyCustomer}" -->
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
-	<!-- <script>
-		$(document)
-				.ready(
-						function() {
-
-							$('#verifyLogIn')
-									.click(
-											function() {
-
-												var email = $('#email').val();
-												//alert(phone);
-												$
-														.ajax({
-															url : 'http://localhost:8000/verifyLogIn',
-															method : 'POST',
-															data : {
-																'email' : email
-															//pass value 
-															},
-															success : function(
-																	data) {
-																//success function
-																//return data form server
-																alert(''
-																		+ email
-																		+ " Congrats... Login Successfull, Welcome To GYW Platform");
-															},
-															error : function(
-																	data) { //error function
-																alert('Failed to Login. Check Your Credentials');
-																console
-																		.log(data)
-															}
-														});
-											});
-						});
-	</script>
- -->
+ 
+</div>
 
 </body>
 </html>

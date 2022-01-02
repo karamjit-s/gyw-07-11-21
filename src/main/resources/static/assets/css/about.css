@@ -2,29 +2,21 @@
 	url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap')
 	;
 
-body {
-	font-family: Arial;
-}
 
-* {
-	box-sizing: border-box;
-}
 
-/* Center website */
 .main {
-	max-width: 1000px;
-	min-height: 1500px;
+	max-width: 100%;
+	height:1200px;
 	margin: auto;
-	padding-top: 100px;
-	background-color: whitesmokes;
+	padding: 0 35px;
 }
 
 .title {
-	padding-left: 400px;
+	margin-left: 450px;
 }
 
 h1 {
-	font-size: 50px;
+	font-size: 30px;
 }
 
 h2 {
@@ -47,6 +39,7 @@ p {
 
 .row {
 	margin: 1px -18px;
+	margin-top:0;
 }
 
 /* Add padding BETWEEN each column */
@@ -124,7 +117,10 @@ p {
 	font-family: arial;
 }
 
-
+.price {
+	color: grey;
+	font-size: 22px;
+}
 
 .card button {
 	border: none;
@@ -163,3 +159,87 @@ p {
 	background-color: #e2e2e2;
 }
 
+
+.add_to_cart {
+	
+	border-radius: 4px;
+	background-color: #0080c0;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 18px;
+	padding: 0px;
+	width: 150px;
+	height: 40px;
+	transition: all 0.5s;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.add_to_cart span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.add_to_cart span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.add_to_cart:hover span {
+	padding-right: 25px;
+}
+
+.add_to_cart:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+
+
+.buy_now_btn {
+	margin-left: 10px;
+	border-radius: 4px;
+	background-color: #ff5300;
+	border: none;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	padding: 0px;
+	width: 150px;
+	height: 40px;
+	transition: all 0.5s;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.buy_now_btn span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.buy_now_btn span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.buy_now_btn:hover span {
+	padding-right: 25px;
+}
+
+.buy_now_btn:hover span:after {
+	opacity: 1;
+	right: 0;
+}

@@ -1,80 +1,104 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="header">
 <head>
-<div th:replace="header :: headerAttr"></div>
 
 <!-- External CSS -->
-<link rel="stylesheet" href=""
-	th:href="@{/assets/css/about.css}">
+<link rel="stylesheet" href="" th:href="@{/assets/css/about.css}">
+<link rel="stylesheet" href="" th:href="@{/assets/js/about.js}">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+	
+</script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+	
+</script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	
+</script>
+
+
 
 </head>
 <body>
 
-	<div class="main">
-		<h1 class="title">About</h1>
+	<div layout:fragment="content">
+		
+		<div class="main">
+			<h1 class="title">About</h1>
 
 
-		<!-- PortFolio Gallery Grid -->
+			<!-- PortFolio Gallery Grid -->
 
-		<div class="row">
+			<div class="row">
 
-			<div class="column nature">
-				<div class="content">
-					<img src="/assets/image/about/build_platform_about.png"
-						alt="Nature" style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Build Platform</h4>
+				<div class="column nature">
+					<div class="content">
+						<img src="/assets/image/about/build_platform_about.png"
+							alt="Nature" style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Build Platform</h4>
 
-					</div>
-					<div class="hoverDiv">Read More...</div>
+						</div>
+						<!-- <div class="hoverDiv">Read More...</div>
 					<div class="hide">Build with the world's most intuitive
 						platform Create better websites with mobile-responsive templates,
-						seamless drag & drop and unlimited customization.</div>
-				</div>
-			</div>
-
-			<div class="column people">
-				<div class="content">
-					<img src="/assets/image/about/grow_online_about.png" alt="Car"
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Grow your business online</h4>
-
+						seamless drag & drop and unlimited customization.</div> -->
 					</div>
+				</div>
 
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Grow your online presence Boost traffic and
-						increase engagement with built-in SEO tools, Facebook ads, email
-						marketing and social posts.</div>
+
+				<div class="column people">
+					<div class="content">
+						<img src="/assets/image/about/grow_online_about.png" alt="Car"
+							style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Grow your business online</h4>
+
+						</div>
+
+						<!-- <div class="hoverDiv">Read More...</div>
+						<div class="hide">Grow your online presence Boost traffic
+							and increase engagement with built-in SEO tools, Facebook ads,
+							email marketing and social posts.</div> -->
+					</div>
 				</div>
 
 				<div class="column people">
 					<div class="content">
 						<img src="/assets/image/about/manage_brand_about.png" alt="Car"
 							style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Manage your brand</h4>
+						<div class="row" id="price_row">
+							<h4>Manage your brand</h4>
 
+						</div>
+						<!-- <div class="hoverDiv">Read More...</div>
+						<div class="hide">Manage your brand from one place Sell your
+							products or services, start a blog and make smart decisions with
+							clear analytics.</div> -->
 					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Manage your brand from one place Sell your
-						products or services, start a blog and make smart decisions with
-						clear analytics.</div>
-				</div>
 
+				</div>
+				<!-- END GRID -->
+
+
+				<!-- END Row -->
 			</div>
-			<!-- END GRID -->
+
+
+			<!-- END Main -->
 		</div>
 
-		<!-- END MAIN -->
-	</div>
+		<button onclick="topFunction()" id="goToTopBtn" title="Go to top">
+			<b>Go to top</b>
+		</button>
 
-</div>
 
-	<button onclick="topFunction()" id="goToTopBtn" title="Go to top">
-		<b>Go to top</b>
-	</button>
 
-	<script>
+
+<script>
 		//Get the button
 		var mybutton = document.getElementById("goToTopBtn");
 
@@ -98,8 +122,6 @@
 			document.documentElement.scrollTop = 0;
 		}
 	</script>
-
-
 
 
 
@@ -186,10 +208,7 @@
 				moreText.style.display = "inline";
 			}
 		}
-	</script>
+	</script> 
 	
-	
-	<div th:insert="adminFooter :: adminFooterAttr"></div>
-
 </body>
 </html>

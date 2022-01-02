@@ -1,19 +1,22 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="header">
 <head>
-  <div th:replace="header :: headerAttr"></div>
 
 	<!-- External CSS -->
-		<link rel="stylesheet" href="" th:href="@{/assets/css/support.css}">
+		<link rel="stylesheet" href="" th:href="@{/assets/css/checkout.css}">
 	
 </head>
 <body>
+
+<div layout:fragment="content">
+
 <div class="container">
-<h1 class="title" style="padding-top:0%;">
+<h1 class="title" style="padding-left:0%;">
 Checkout
 </h1>
 <h2 style="color:green">Hurray ! You have successfully ordered your product. Your Product is under development.</h2>
 </div>
-<div th:insert="footer :: footerAttr"></div>
- 
+</div> 
 </body>
 </html>

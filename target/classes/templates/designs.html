@@ -1,370 +1,397 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="header">
+
 <head>
-<div th:replace="header :: headerAttr"></div>
+<!-- <div th:replace="header :: headerAttr"></div>
+ -->
+
+<link rel="stylesheet" href="" th:href="@{/assets/js/about.js}">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+	
+</script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+	
+</script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	
+</script>
 
 <!-- External CSS -->
-<link rel="stylesheet" href=""
-	th:href="@{/assets/css/designs.css}">
+<link rel="stylesheet" href="" th:href="@{/assets/css/designs.css}">
 
+
+
+<th:block layout:fragment="script">
+	<script th:src="@{/js/accounts.js}"></script>
+</th:block>
 </head>
 <body>
 
-	<!-- MAIN (Center website) -->
-	<div class="main">
-		<h1 class="title">Explore Designs</h1>
-		<hr>
-		<h2>Categories</h2>
 
-		<div id="myBtnContainer">
-			<button class="btn active" onclick="filterSelection('all')">
-				Show all</button>
-			<button class="btn" onclick="filterSelection('nature')">
-				Dashboards</button>
-			<button class="btn" onclick="filterSelection('cars')">UI
-				Elements</button>
-			<button class="btn" onclick="filterSelection('people')">
-				Components</button>
+
+	<div layout:fragment="content">
+
+
+
+		<!-- MAIN (Center website) -->
+		<div class="main">
+			<h1 class="title">Explore Designs</h1>
+			<hr>
+			<h2>Categories</h2>
+
+			<div id="myBtnContainer">
+				<button class="btn active" onclick="filterSelection('all')">
+					Show all</button>
+				<button class="btn" onclick="filterSelection('nature')">
+					Dashboards</button>
+				<button class="btn" onclick="filterSelection('cars')">UI
+					Elements</button>
+				<button class="btn" onclick="filterSelection('people')">
+					Components</button>
+			</div>
+
+			<!-- PortFolio Gallery Grid -->
+
+			<div class="row">
+
+				<div class="column nature">
+					<div class="content">
+						<img src="/assets/image/designs/facit_db.png" alt="Nature"
+							style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Facit Dark Theme</h4>
+							<p class="price">$19.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="showCartItems">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Facit CRM dashboard with Line charts and
+							Sales Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales Column.</div>
+					</div>
+				</div>
+				<div class="column nature">
+					<div class="content">
+						<img src="/assets/image/designs/crypto_sales_db.png"
+							alt="Dashlite" style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>DashLite</h4>
+							<p class="price">$29.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="showCartItems">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Blue and white colored dashboard with grid
+							view charts.Blue and white colored dashboard with grid view
+							charts.Blue and white colored dashboard with grid view
+							charts.Blue and white colored dashboard with grid view charts</div>
+
+
+					</div>
+				</div>
+				<div class="column nature">
+					<div class="content">
+						<img src="/assets/image/designs/bw_db.png" style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Cliq Dark Theme</h4>
+							<p class="price">$34.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="showCartItems">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Dark thems with colorful dashboard with
+							grid view charts.Dark thems with colorful dashboard with grid
+							view charts.Dark thems with colorful dashboard with grid view
+							charts.Dark thems with colorful dashboard with grid view charts.</div>
+					</div>
+				</div>
+
+
+				<div class="column cars">
+					<div class="content">
+						<img src="/assets/image/designs/cliq_tables.png" alt="Car"
+							style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Cliq Tables</h4>
+							<p class="price">$4.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="showCartItems">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Cliq Tables Ui Elemmets with sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales Column.</div>
+					</div>
+				</div>
+
+
+				<div class="column cars">
+					<div class="content">
+						<img src="/assets/image/designs/facit_list.png" alt="Car"
+							style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Facit List</h4>
+							<p class="price">$4.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="showCartItems">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Facit List Ui Elemmets with sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales Column.</div>
+					</div>
+				</div>
+
+				<div class="column cars">
+					<div class="content">
+						<img src="/assets/image/designs/dashlite_badges.png" alt="Car"
+							style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Badges</h4>
+							<p class="price">$4.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="showCartItems">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Facit CRM dashboard with Line charts and
+							Sales Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales Column.</div>
+					</div>
+				</div>
+				<div class="column cars">
+					<div class="content">
+						<img src="/assets/image/designs/dashlite_buttons.png" alt="Car"
+							style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Buttons</h4>
+							<p class="price">$9.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="showCartItems">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Facit CRM dashboard with Line charts and
+							Sales Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales Column.</div>
+					</div>
+				</div>
+				<div class="column cars">
+					<div class="content">
+						<img src="/assets/image/designs/dashlite_icons.png" alt="Car"
+							style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Icons</h4>
+							<p class="price">$14.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="showCartItems">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Facit CRM dashboard with Line charts and
+							Sales Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales Column.</div>
+					</div>
+				</div>
+				<div class="column people">
+					<div class="content">
+						<img src="/assets/image/designs/facit_appointments.png" alt="Car"
+							style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Facit Appointments</h4>
+							<p class="price">$29.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="showCartItems">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Facit CRM dashboard with Line charts and
+							Sales Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales Column.</div>
+					</div>
+				</div>
+
+				<div class="column people">
+					<div class="content">
+						<img src="/assets/image/designs/facit_chat.png" alt="Car"
+							style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Facit Chat</h4>
+							<p class="price">$29.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="addCartItem">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Facit CRM dashboard with Line charts and
+							Sales Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales Column.</div>
+					</div>
+				</div>
+
+				<div class="column people">
+					<div class="content">
+						<img src="/assets/image/designs/dashlite_chat.png" alt="Car"
+							style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Chat/Messenger</h4>
+							<p class="price">$29.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="showCartItems">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Facit CRM dashboard with Line charts and
+							Sales Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales Column.</div>
+					</div>
+				</div>
+				<div class="column people">
+					<div class="content">
+						<img src="/assets/image/designs/dashlite_transactions.png"
+							alt="Car" style="width: 100%">
+						<div class="row" id="price_row">
+							<h4>Transactions List</h4>
+							<p class="price">$29.99</p>
+							<p class="cart" style="margin-left: 20px;">
+								<a href="showCartItems">
+									<button class="add_to_cart">
+										<span>Add To Cart</span>
+									</button>
+								</a> <a href="buyItems">
+									<button class="buy_now_btn">
+										<span>Buy Now</span>
+									</button>
+								</a>
+							</p>
+						</div>
+						<div class="hoverDiv">Read More...</div>
+						<div class="hide">Facit CRM dashboard with Line charts and
+							Sales Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales
+							Column.Facit CRM dashboard with Line charts and Sales Column.</div>
+					</div>
+				</div>
+
+				<!-- END GRID -->
+			</div>
+
+			<!-- END MAIN -->
 		</div>
 
-		<!-- PortFolio Gallery Grid -->
-
-		<div class="row">
-
-			<div class="column nature">
-				<div class="content">
-					<img src="/assets/image/designs/facit_db.png" alt="Nature"
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Facit Dark Theme</h4>
-						<p class="price">$19.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="showCartItems">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Facit CRM dashboard with Line charts and
-						Sales Column.Facit CRM dashboard with Line charts and Sales
-						Column.Facit CRM dashboard with Line charts and Sales Column.Facit
-						CRM dashboard with Line charts and Sales Column.</div>
-				</div>
-			</div>
-			<div class="column nature">
-				<div class="content">
-					<img src="/assets/image/designs/crypto_sales_db.png" alt="Dashlite"
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>DashLite</h4>
-						<p class="price">$29.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="showCartItems">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Blue and white colored dashboard with grid
-						view charts.Blue and white colored dashboard with grid view
-						charts.Blue and white colored dashboard with grid view charts.Blue
-						and white colored dashboard with grid view charts</div>
 
 
-				</div>
-			</div>
-			<div class="column nature">
-				<div class="content">
-					<img src="/assets/image/designs/bw_db.png" 
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Cliq Dark Theme</h4>
-						<p class="price">$34.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="showCartItems">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Dark thems with colorful dashboard with
-						grid view charts.Dark thems with colorful dashboard with grid view
-						charts.Dark thems with colorful dashboard with grid view
-						charts.Dark thems with colorful dashboard with grid view charts.</div>
-				</div>
-			</div>
-			
-			
-			<div class="column cars">
-				<div class="content">
-					<img src="/assets/image/designs/cliq_tables.png" alt="Car"
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Cliq Tables</h4>
-						<p class="price">$4.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="showCartItems">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Cliq Tables Ui Elemmets with sales
-						Column.Facit CRM dashboard with Line charts and Sales Column.Facit
-						CRM dashboard with Line charts and Sales Column.Facit CRM
-						dashboard with Line charts and Sales Column.</div>
-				</div>
-			</div>
-			
-			
-			<div class="column cars">
-				<div class="content">
-					<img src="/assets/image/designs/facit_list.png" alt="Car"
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Facit List</h4>
-						<p class="price">$4.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="showCartItems">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Facit List Ui Elemmets with sales
-						Column.Facit CRM dashboard with Line charts and Sales Column.Facit
-						CRM dashboard with Line charts and Sales Column.Facit CRM
-						dashboard with Line charts and Sales Column.</div>
-				</div>
-			</div>
+		<button onclick="topFunction()" id="goToTopBtn" title="Go to top">
+			<b>Go to top</b>
+		</button>
 
-			<div class="column cars">
-				<div class="content">
-					<img src="/assets/image/designs/dashlite_badges.png" alt="Car"
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Badges</h4>
-						<p class="price">$4.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="showCartItems">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Facit CRM dashboard with Line charts and
-						Sales Column.Facit CRM dashboard with Line charts and Sales
-						Column.Facit CRM dashboard with Line charts and Sales Column.Facit
-						CRM dashboard with Line charts and Sales Column.</div>
-				</div>
-			</div>
-			<div class="column cars">
-				<div class="content">
-					<img src="/assets/image/designs/dashlite_buttons.png" alt="Car"
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Buttons</h4>
-						<p class="price">$9.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="showCartItems">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Facit CRM dashboard with Line charts and
-						Sales Column.Facit CRM dashboard with Line charts and Sales
-						Column.Facit CRM dashboard with Line charts and Sales Column.Facit
-						CRM dashboard with Line charts and Sales Column.</div>
-				</div>
-			</div>
-			<div class="column cars">
-				<div class="content">
-					<img src="/assets/image/designs/dashlite_icons.png" alt="Car"
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Icons</h4>
-						<p class="price">$14.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="showCartItems">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Facit CRM dashboard with Line charts and
-						Sales Column.Facit CRM dashboard with Line charts and Sales
-						Column.Facit CRM dashboard with Line charts and Sales Column.Facit
-						CRM dashboard with Line charts and Sales Column.</div>
-				</div>
-			</div>
-			<div class="column people">
-				<div class="content">
-					<img src="/assets/image/designs/facit_appointments.png" alt="Car"
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Facit Appointments</h4>
-						<p class="price">$29.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="showCartItems">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Facit CRM dashboard with Line charts and
-						Sales Column.Facit CRM dashboard with Line charts and Sales
-						Column.Facit CRM dashboard with Line charts and Sales Column.Facit
-						CRM dashboard with Line charts and Sales Column.</div>
-				</div>
-			</div>
-			
-			<div class="column people">
-				<div class="content">
-					<img src="/assets/image/designs/facit_chat.png" alt="Car"
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Facit Chat</h4>
-						<p class="price">$29.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="addCartItem">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Facit CRM dashboard with Line charts and
-						Sales Column.Facit CRM dashboard with Line charts and Sales
-						Column.Facit CRM dashboard with Line charts and Sales Column.Facit
-						CRM dashboard with Line charts and Sales Column.</div>
-				</div>
-			</div>
-			
-			<div class="column people">
-				<div class="content">
-					<img src="/assets/image/designs/dashlite_chat.png" alt="Car"
-						style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Chat/Messenger</h4>
-						<p class="price">$29.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="showCartItems">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Facit CRM dashboard with Line charts and
-						Sales Column.Facit CRM dashboard with Line charts and Sales
-						Column.Facit CRM dashboard with Line charts and Sales Column.Facit
-						CRM dashboard with Line charts and Sales Column.</div>
-				</div>
-			</div>
-			<div class="column people">
-				<div class="content">
-					<img src="/assets/image/designs/dashlite_transactions.png"
-						alt="Car" style="width: 100%">
-					<div class="row" id="price_row">
-						<h4>Transactions List</h4>
-						<p class="price">$29.99</p>
-						<p class="cart" style="margin-left: 20px;">
-							<a href="showCartItems">
-								<button class="add_to_cart">
-									<span>Add To Cart</span>
-								</button>
-							</a> <a href="buyItems">
-								<button class="buy_now_btn">
-									<span>Buy Now</span>
-								</button>
-							</a>
-						</p>
-					</div>
-					<div class="hoverDiv">Read More...</div>
-					<div class="hide">Facit CRM dashboard with Line charts and
-						Sales Column.Facit CRM dashboard with Line charts and Sales
-						Column.Facit CRM dashboard with Line charts and Sales Column.Facit
-						CRM dashboard with Line charts and Sales Column.</div>
-				</div>
-			</div>
-
-			<!-- END GRID -->
-		</div>
-
-		<!-- END MAIN -->
-	</div>
-
-
-
-	<button onclick="topFunction()" id="goToTopBtn" title="Go to top">
-		<b>Go to top</b>
-	</button>
-
-	<script>
+			<script>
 		//Get the button
 		var mybutton = document.getElementById("goToTopBtn");
 
@@ -474,10 +501,9 @@
 				moreText.style.display = "inline";
 			}
 		}
-	</script>
+	</script> 
 
 
-	<div th:insert="footer :: footerAttr"></div>
-
+	</div>
 </body>
 </html>

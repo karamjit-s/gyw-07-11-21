@@ -1,6 +1,6 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-<div th:replace="header :: headerAttr"></div>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="header"><head>
+<!-- <div th:replace="header :: headerAttr"></div> -->
 
 <!-- External CSS -->
 <link rel="stylesheet" href=""
@@ -8,16 +8,17 @@
 
 </head>
 <body>
+<div layout:fragment="content">
 
 
 	<div class="container">
 
-		<div class="row" id="title_row" style="margin-top:100px;">
+		<div class="row" id="title_row" style="margin-top:0px;">
 		<!-- 	<a class="a_back_btn" th:href="@{/}" style="margin-top: 15px;"> <i
 				id="i_back_btn" class="fas fa-arrow-circle-left"></i>
 			</a> -->
 			
-			<a href="a_back_btn" style="font-size:40px; margin-top: 30px; margin-left:20px;">
+			<a href="a_back_btn" style="font-size:40px; margin-top: 10px; margin-left:20px;">
           <span class="glyphicon glyphicon-circle-arrow-left"></span>
         </a>
         
@@ -76,7 +77,10 @@
 		</div>
 
 	</div>
-
-	<div th:insert="footer :: footerAttr"></div>
+<!-- 
+	<div th:insert="footer :: footerAttr"></div> -->
+	
+	
+	</div>
 </body>
 </html>
