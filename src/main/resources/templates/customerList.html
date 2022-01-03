@@ -1,73 +1,113 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorate="header">
-<head>
 
-<!-- External CSS -->
+<head>
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.10.14/css/jquery.dataTables.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap"
+	rel="stylesheet">
+
 <link rel="stylesheet" href="" th:href="@{/assets/css/customerList.css}">
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="https://cdn.datatables.net/1.10.14/js/jquery.dataTables.min.js"></script>
+<script src="/assets/js/customerList.js"></script>
 
 
 
 </head>
 <body>
-<div layout:fragment="content">
-	<div class="container">
-		<div class="row" style="margin-top: 100px;">
-			<!-- <a class="a_back_btn" th:href="@{/admin}"> <i id="i_back_btn"
-				class="fas fa-arrow-circle-left"></i>
-			</a> -->
+	<div layout:fragment="content">
 
-			<a href="a_back_btn" th:href="@{/}"
-				style="font-size: 40px; margin-top: 30px; margin-left: 20px;"> <span
-				class="glyphicon glyphicon-circle-arrow-left"></span>
-			</a>
+		<div class="container p-30">
+			<div class="row">
+				<div class="col-md-12 main-datatable">
+					<div class="card_body">
+						<div class="row d-flex">
+							<div class="col-sm-4 createSegment">
+								<!-- <a class="btn dim_button create_new"> <span
+									class="glyphicon glyphicon-plus"></span> Create New
+								</a> -->
+							</div>
+							<div class="col-sm-8 add_flex">
+								<div class="form-group searchInput">
+									<label for="email">Search:</label> <input type="search"
+										class="form-control" id="filterbox" placeholder=" ">
+								</div>
+							</div>
+						</div>
+						<div class="overflow-x">
+							<table style="width: 100%;" id="filtertable"
+								class="table cust-datatable dataTable no-footer">
+								<thead>
+									<tr>
+										<th style="min-width: 5px;">ID</th>
+										<th style="min-width: 80px;">User Name</th>
+										<th style="min-width: 120px;">Email</th>
+										<th style="min-width: 100px;">Contact</th>
+										<th style="min-width: 100px;">Address</th>
+										<th style="min-width: 80px;">Company Name</th>
+										<th style="min-width: 250px;">Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="customerVal : ${customerAttr}">
+										<td th:text="${customerVal.id}">1</td>
+										<td th:text="${customerVal.user_name}"></td>
+										<td th:text="${customerVal.email}"><span
+											class="mode mode_process"></span></td>
+										<td th:text="${customerVal.contact}"></td>
+										<td th:text="${customerVal.address}"></td>
+										<td th:text="${customerVal.company_name}"><span
+											class="mode mode_on"></span></td>
 
-			<h3 class="header_title">Customers Details</h3>
+
+										<td><a
+											th:href="@{/showCustomerUpdateForm/{id}(id=${customerVal.id})}">
+												<i class="material-icons" style="font-size:25px; margin-right:15px;color:#006eff">border_color</i>
+										</a> <a th:href="@{/deleteCustomer/{id}(id=${customerVal.id})}"><i
+												class="material-icons" style="font-size: 30px; color: red">delete</i>
+										</a></td>
+
+
+
+
+
+									</tr>
+
+
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 
-		<!-- <a th:href = "@{/showCustomerForm}" class="btn btn-primary btn-sm mb-3"> Add Record </a> -->
-
-		<table class="table table-striped table-responsive-md">
-			<thead>
-				<tr>
-					<th>
-						<!-- 						<a th:href="@{'/page/' + ${currentPage} + '?sortField=action&sortDir=' + ${reverseSortDir}}"> -->
-						User Name <!-- </a> -->
-					</th>
-					<th>
-						<!-- 						<a th:href="@{'/page/' + ${currentPage} + '?sortField=action&sortDir=' + ${reverseSortDir}}"> -->
-						Email <!-- </a> -->
-					</th>
-					<th>Password</th>
-					<th>Confirm Password</th>
-					<!-- <th>
-												<a th:href="@{'/page/' + ${currentPage} + '?sortField=action&sortDir=' + ${reverseSortDir}}">
-						Contact </a>
-					</th>
-					<th>Otp</th> -->
-					<th>Actions</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="customerVal : ${customerAttr}">
-					<td th:text="${customerVal.user_name}"></td>
-					<td th:text="${customerVal.email}"></td>
-					<td th:text="${customerVal.password}"></td>
-					<td th:text="${customerVal.confirm_password}"></td>
-					<td><a
-						th:href="@{/showCustomerUpdateForm/{id}(id=${customerVal.id})}">
-							<i class="material-icons"
-							style="font-size: 32px; margin-right: 15px;">border_color</i>
-					</a> <a th:href="@{/deleteCustomer/{id}(id=${customerVal.id})}"><i
-							class="material-icons" style="font-size: 35px; color: red">delete</i>
-					</a></td>
-				</tr>
-			</tbody>
-		</table>
-
 	</div>
 
-</div>
 </body>
 </html>
+

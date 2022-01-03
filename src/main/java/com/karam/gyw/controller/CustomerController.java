@@ -2,15 +2,22 @@ package com.karam.gyw.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.karam.gyw.exception.ResourceNotFoundException;
 import com.karam.gyw.model.CustomerModel;
 import com.karam.gyw.repository.CustomerRepository;
 import com.karam.gyw.service.CustomerService;
@@ -49,7 +56,7 @@ public class CustomerController {
 	
 
 	@GetMapping("/showCustomerUpdateForm/{id}")
-	public String showFormForUpdate(@PathVariable ( value = "id") long id, Model model) {
+	public String showFormForUpdate(@PathVariable ( value = "id") int id, Model model) {
 		
 		CustomerModel customerModel = customerService.getCustomerById(id);		
 		model.addAttribute("customerAttr", customerModel);
@@ -57,8 +64,23 @@ public class CustomerController {
 		return "customerUpdateForm";
 	}
 	
+	@PostMapping("/updateCustomer/{id}")
+	public String updateCustomer(@PathVariable(value = "id") int id,
+			@Valid CustomerModel customerModel,  BindingResult result, Model model) throws ResourceNotFoundException {
+
+		 customerService.update(id, customerModel);
+		 
+		 return "redirect:/showCustomerList";
+		 
+	}
+	
+	
+	
+	
+	
+	
 	@GetMapping("/deleteCustomer/{id}")
-	public String deleteCustomer(@PathVariable (value = "id") long id) {
+	public String deleteCustomer(@PathVariable (value = "id") int id) {
 		
 		this.customerService.deleteCustomerById(id);
 
@@ -93,7 +115,7 @@ public class CustomerController {
 		System.out.println("email1 == "+email1);
 
 		CustomerModel temp=	customerRepository.findByEmail(email1);
-		System.out.println("temp == "+temp);
+		System.out.println("email == "+temp);
 		
 		if(temp!=null) {
 			System.out.println("Login Successfull, Welcome To GYW Platform");

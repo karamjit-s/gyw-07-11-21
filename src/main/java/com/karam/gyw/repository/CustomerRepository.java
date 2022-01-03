@@ -6,9 +6,8 @@ import org.springframework.stereotype.Repository;
 import com.karam.gyw.model.CustomerModel;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<CustomerModel, Long>{
+public interface CustomerRepository extends JpaRepository<CustomerModel, Integer>{
 	
 	CustomerModel findByEmail(String email);
-	
 	
 }

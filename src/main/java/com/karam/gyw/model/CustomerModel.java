@@ -26,46 +26,43 @@ public class CustomerModel {
 		
 		@Id
 		@GeneratedValue(strategy =  GenerationType.IDENTITY)
-		private long id;
+		private int id;
 		
 		@Column(name = "user_name")
 		private String user_name;
 		
-//		@Column(name = "first_name")
-//		private String first_name;
-//		
-//		@Column(name = "last_name")
-//		private String last_name;
+		@Column(name = "full_name")
+		private String full_name;
 		
 		@Column(name = "email")
 		private String email;
 		
+		@Column(name = "gender")
+		private String gender;
+	
 		@Column(name = "password")
 		private String password;
 		
 		@Column(name = "confirm_password")
 		private String confirm_password;
 		
-		@Column(name = "phone")
-		private String phone;
+		@Column(name = "contact")
+		private String contact;
+	
+		@Column(name = "address")
+		private String address;
 		
-//		@Column(name = "created_time", updatable=false)
-//		private Date created_time;
-		
-//		@Enumerated(EnumType.STRING)
-//		@Column(name = "auth_provider")
-//		public AuthenticationProvider auth_provider;
-		
-//		private boolean enabled;
-		
-		@Column(name = "otp")
-		private String otp;
+		@Column(name = "company_name")
+		private String company_name;
+
+		@Column(name = "agree")
+		private boolean agree;
 
 		public long getId() {
 			return id;
 		}
 
-		public void setId(long id) {
+		public void setId(int id) {
 			this.id = id;
 		}
 
@@ -77,12 +74,28 @@ public class CustomerModel {
 			this.user_name = user_name;
 		}
 
+		public String getFull_name() {
+			return full_name;
+		}
+
+		public void setFull_name(String full_name) {
+			this.full_name = full_name;
+		}
+
 		public String getEmail() {
 			return email;
 		}
 
 		public void setEmail(String email) {
 			this.email = email;
+		}
+
+		public String getGender() {
+			return gender;
+		}
+
+		public void setGender(String gender) {
+			this.gender = gender;
 		}
 
 		public String getPassword() {
@@ -101,22 +114,40 @@ public class CustomerModel {
 			this.confirm_password = confirm_password;
 		}
 
-		public String getPhone() {
-			return phone;
+		public String getContact() {
+			return contact;
 		}
 
-		public void setPhone(String phone) {
-			this.phone = phone;
+		public void setContact(String contact) {
+			this.contact = contact;
 		}
 
-		public String getOtp() {
-			return otp;
+		public String getAddress() {
+			return address;
 		}
 
-		public void setOtp(String otp) {
-			this.otp = otp;
+		public void setAddress(String address) {
+			this.address = address;
 		}
 
+		public String getCompany_name() {
+			return company_name;
+		}
+
+		public void setCompany_name(String company_name) {
+			this.company_name = company_name;
+		}
+
+		public boolean isAgree() {
+			return agree;
+		}
+
+		public void setAgree(boolean agree) {
+			this.agree = agree;
+		}
+
+		
+		
 		
 		
 		
