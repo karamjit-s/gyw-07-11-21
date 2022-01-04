@@ -5,8 +5,8 @@
 body {
 	background-color: #e2e2e2;
 	color : black;
-	min-height:1200px;
-}
+/* 	min-height:1200px;
+ */}
 
 .container {
 	padding: 0 10%;
@@ -20,7 +20,7 @@ width:100%;
 }
 
 .header_title{
-	padding-left:370px;
+	padding-left:40px;
 }
 
 
