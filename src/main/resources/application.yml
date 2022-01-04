@@ -1,59 +1,59 @@
-twilio:
-      account_sid: ACefa5a5a1b6f4fcab9b1843d01fb6d1e7
-      auth_token: bba265d0c76ee2dc520d4db949e6b1ca
-      service_id: VAcc2ab3599dbecae1ec6294a5717d1e4e
-
-
-server:
-  port: 8000
-
-spring:
-  datasource:
-    driver-class-name:  com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/gyw_db
-    username: root
-    password: root
-    hikari:
-      initialization-fail-timeout: 0
-  jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    generate-ddl: true
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-
-
-##spring:
-##  datasource:
-##    driver-class-name: org.postgresql.Driver
-##    url: jdbc:postgresql://ec2-18-214-214-252.compute-1.amazonaws.com:5432/d21p0f8889uta3
-##    username: divfqgjfbqfrfk
-##    password: af0a9f69a80c61c3be3fcba66e7ae0a0f68846f2e8437ed7c271c1cadb688696
-##    hikari:
-##      initialization-fail-timeout: 0
-##  jpa:
-##    database-platform: org.hibernate.dialect.PostgreSQLDialect
-##    generate-ddl: true
-##    show-sql: true
-##    hibernate:
-##      ddl-auto: update
-#      
-#  mail:
-#    host: smtp.gmail.com
-#    username: ikaramjitsingh16@gmail.com   
-#    password: Karam@160896
-#    port: 587
-#    properties:
-#      mail:
-#        smtp:
-#          auth: true
-#          starttls:
-#            enable: true
+#twilio:
+#      account_sid: ACefa5a5a1b6f4fcab9b1843d01fb6d1e7
+#      auth_token: bba265d0c76ee2dc520d4db949e6b1ca
+#      service_id: VAcc2ab3599dbecae1ec6294a5717d1e4e
 #
-
-
-
-
-
-
-
+#
+#server:
+#  port: 8000
+#
+#spring:
+#  datasource:
+#    driver-class-name:  com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/gyw_db
+#    username: root
+#    password: root
+#    hikari:
+#      initialization-fail-timeout: 0
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL8Dialect
+#    generate-ddl: true
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#
+#
+###spring:
+###  datasource:
+###    driver-class-name: org.postgresql.Driver
+###    url: jdbc:postgresql://ec2-18-214-214-252.compute-1.amazonaws.com:5432/d21p0f8889uta3
+###    username: divfqgjfbqfrfk
+###    password: af0a9f69a80c61c3be3fcba66e7ae0a0f68846f2e8437ed7c271c1cadb688696
+###    hikari:
+###      initialization-fail-timeout: 0
+###  jpa:
+###    database-platform: org.hibernate.dialect.PostgreSQLDialect
+###    generate-ddl: true
+###    show-sql: true
+###    hibernate:
+###      ddl-auto: update
+##      
+##  mail:
+##    host: smtp.gmail.com
+##    username: ikaramjitsingh16@gmail.com   
+##    password: Karam@160896
+##    port: 587
+##    properties:
+##      mail:
+##        smtp:
+##          auth: true
+##          starttls:
+##            enable: true
+##
+#
+#
+#
+#
+#
+#
+#
