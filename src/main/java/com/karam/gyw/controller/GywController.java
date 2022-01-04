@@ -97,16 +97,10 @@ public class GywController {
 	}
 	
 	@GetMapping("/showDesignsPage")
-	public String showDesignsPage(Model model) {
+	public String showDesignsPage() {
 
-		GywModel gywModel = new GywModel();
-		model.addAttribute("gywModel", gywModel);
-		
-		
-		// create model attribute to bind form data
-				List<CartModel> cartModel1= cartService.getAllCart();		
-				System.out.println("getall cart items " + cartModel1);
-				model.addAttribute("cartAttr", cartModel1);
+//				List<CartModel> cartModel1= cartService.getAllCart();		
+//				System.out.println("getall cart items " + cartModel1);
 				
 				
 		return "designs";

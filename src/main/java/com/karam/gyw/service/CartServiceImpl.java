@@ -1,11 +1,15 @@
 package com.karam.gyw.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.karam.gyw.exception.ResourceNotFoundException;
 import com.karam.gyw.model.CartModel;
+import com.karam.gyw.model.CustomerModel;
 import com.karam.gyw.repository.CartRepository;
 
 @Service
@@ -17,7 +21,7 @@ public class CartServiceImpl implements CartService{
 	
 	/* GetALL */
 	@Override
-	public List<CartModel> getAllCart() {
+	public List<CartModel> getAllCartItems() {
 		return cartRepository.findAll();
 	}
 
@@ -31,8 +35,8 @@ public class CartServiceImpl implements CartService{
 	@Override
 	public CartModel saveCartItems(String product_name, String price) {
 		
-		String product_name_value ="Facit Dark Theme";
-		String price_value = "19.99";
+		String product_name_value =product_name;
+		String price_value = price;
 		
 		CartModel cartModel = new CartModel();
 		cartModel.setProduct_name(product_name_value);
@@ -40,5 +44,17 @@ public class CartServiceImpl implements CartService{
 
 		return this.cartRepository.save(cartModel);
 	}
+	
+	/* DELETE by ID */
+	public Map<String, Boolean> deleteCartItemById(int product_id) throws ResourceNotFoundException {
+		CartModel cartModel = cartRepository.findById(product_id)
+				.orElseThrow(() -> new ResourceNotFoundException("Customer not found for this product_id :: " + product_id));
+
+		cartRepository.delete(cartModel);
+		Map<String, Boolean> response = new HashMap<>();
+		response.put("deleted", Boolean.TRUE);
+		return response;
+	}
+	
 	
 }

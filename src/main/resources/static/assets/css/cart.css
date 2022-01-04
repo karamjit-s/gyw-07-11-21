@@ -23,3 +23,8 @@ width:100%;
 	padding-left:370px;
 }
 
+
+tr{
+	justify-content: center;
+	align-content: center;
+}

@@ -6,6 +6,8 @@
  -->
 
 <link rel="stylesheet" href="" th:href="@{/assets/js/about.js}">
+<script th:src="@{//scriptserver.example.net/myscript.js}"></script>
+<script src="//scriptserver.example.net/myscript.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
@@ -66,8 +68,8 @@
 							<h4>Facit Dark Theme</h4>
 							<p class="price">$19.99</p>
 							<p class="cart" style="margin-left: 20px;">
-								<a href="showCartItems">
-									<button class="add_to_cart">
+								<a th:href="@{/addCartItem/{product_name}/{price}(product_name='facit_dark_theme',price='$19.99')}">
+																	<button class="add_to_cart">
 										<span>Add To Cart</span>
 									</button>
 								</a> <a href="buyItems">
@@ -92,7 +94,7 @@
 							<h4>DashLite</h4>
 							<p class="price">$29.99</p>
 							<p class="cart" style="margin-left: 20px;">
-								<a href="showCartItems">
+								<a th:href="@{/addCartItem/{product_name}/{price}(product_name='dashlite',price='$29.99')}">
 									<button class="add_to_cart">
 										<span>Add To Cart</span>
 									</button>
@@ -119,7 +121,7 @@
 							<h4>Cliq Dark Theme</h4>
 							<p class="price">$34.99</p>
 							<p class="cart" style="margin-left: 20px;">
-								<a href="showCartItems">
+								<a th:href="@{/addCartItem/{product_name}/{price}(product_name='cliq_dark_theme',price='$34.99')}">
 									<button class="add_to_cart">
 										<span>Add To Cart</span>
 									</button>
@@ -147,7 +149,7 @@
 							<h4>Cliq Tables</h4>
 							<p class="price">$4.99</p>
 							<p class="cart" style="margin-left: 20px;">
-								<a href="showCartItems">
+								<a th:href="@{/addCartItem/{product_name}/{price}(product_name='cliq_table',price='$4.99')}">
 									<button class="add_to_cart">
 										<span>Add To Cart</span>
 									</button>
