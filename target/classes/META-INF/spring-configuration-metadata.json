@@ -1,36 +1,15 @@
 {
-  "groups": [
-    {
-      "name": "twilio",
-      "type": "com.karam.gyw.otp.OtpProperties",
-      "sourceType": "com.karam.gyw.otp.OtpProperties"
-    }
-  ],
+  "groups": [],
   "properties": [
-    {
-      "name": "twilio.account-sid",
-      "type": "java.lang.String",
-      "sourceType": "com.karam.gyw.otp.OtpProperties"
-    },
     {
       "name": "twilio.account_sid",
       "type": "java.lang.String",
       "description": "A description for 'twilio.account_sid'"
     },
     {
-      "name": "twilio.auth-token",
-      "type": "java.lang.String",
-      "sourceType": "com.karam.gyw.otp.OtpProperties"
-    },
-    {
       "name": "twilio.auth_token",
       "type": "java.lang.String",
       "description": "A description for 'twilio.auth_token'"
-    },
-    {
-      "name": "twilio.service-id",
-      "type": "java.lang.String",
-      "sourceType": "com.karam.gyw.otp.OtpProperties"
     },
     {
       "name": "twilio.service_id",

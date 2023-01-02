@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.karam.gyw.exception.ResourceNotFoundException;
 import com.karam.gyw.model.CartModel;
-import com.karam.gyw.model.CustomerModel;
+//import com.karam.gyw.model.CustomerModel;
 import com.karam.gyw.model.GywModel;
 import com.karam.gyw.service.CartService;
 
