@@ -1,47 +1,47 @@
-##twilio:
-##      account_sid: ACefa5a5a1b6f4fcab9b1843d01fb6d1e7
-##      auth_token: bba265d0c76ee2dc520d4db949e6b1ca
-##      service_id: VAcc2ab3599dbecae1ec6294a5717d1e4e
-##
-##
+# ##twilio:
+# ##      account_sid: ACefa5a5a1b6f4fcab9b1843d01fb6d1e7
+# ##      auth_token: bba265d0c76ee2dc520d4db949e6b1ca
+# ##      service_id: VAcc2ab3599dbecae1ec6294a5717d1e4e
+# ##
+# ##
 
-#
-#spring:
-#  datasource:
-#    driver-class-name:  com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/gyw_db
-#    username: root
-#    password: root
-#    hikari:
-#      initialization-fail-timeout: 0
-#  jpa:
-#    database-platform: org.hibernate.dialect.MySQL8Dialect
-#    generate-ddl: true
-#    show-sql: true
-#    hibernate:
-#      ddl-auto: update
-##
-##
+# #
+# #spring:
+# #  datasource:
+# #    driver-class-name:  com.mysql.cj.jdbc.Driver
+# #    url: jdbc:mysql://localhost:3306/gyw_db
+# #    username: root
+# #    password: root
+# #    hikari:
+# #      initialization-fail-timeout: 0
+# #  jpa:
+# #    database-platform: org.hibernate.dialect.MySQL8Dialect
+# #    generate-ddl: true
+# #    show-sql: true
+# #    hibernate:
+# #      ddl-auto: update
+# ##
+# ##
 
-#
-#server:
-#  port: 8000
-#  
+# #
+# #server:
+# #  port: 8000
+# #  
   
-spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url:jdbc:postgresql://containers-us-west-108.railway.app:6642/railway
-    username:postgres
-    password:NVAPqvDO7A6tSfZEvdtb
-    hikari:
-      initialization-fail-timeout: 0
-  jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    generate-ddl: true
-    show-sql: true
-    hibernate:
-      ddl-auto: update
+# spring:
+#   datasource:
+#     driver-class-name: org.postgresql.Driver
+#     url:jdbc:postgresql://containers-us-west-108.railway.app:6642/railway
+#     username:postgres
+#     password:NVAPqvDO7A6tSfZEvdtb
+#     hikari:
+#       initialization-fail-timeout: 0
+#   jpa:
+#     database-platform: org.hibernate.dialect.PostgreSQLDialect
+#     generate-ddl: true
+#     show-sql: true
+#     hibernate:
+#       ddl-auto: update
       
       
 
