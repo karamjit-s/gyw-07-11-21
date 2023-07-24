@@ -7,4 +7,5 @@ Designs
 Orders
 ![image](https://github.com/karamjit-s/gyw-07-11-21/assets/69523356/b7ebd22b-80cd-4db4-afec-bb908a1d4821)
 
-
+About Us
+![image](https://github.com/karamjit-s/gyw-07-11-21/assets/69523356/0cd31389-e35f-479a-96bb-bef3db4baf3b)
